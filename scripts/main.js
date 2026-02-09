@@ -37,6 +37,108 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ============================================
+  // MEGA OVERLAY SYSTEM (Detached Fixed Panel)
+  // Nav triggers visibility. It does not control geometry.
+  // All panels exist in DOM. Only visibility changes.
+  // ============================================
+
+  const megaOverlay = document.getElementById("megaOverlay");
+  const navItems = document.querySelectorAll(".nav-item[data-category]");
+  let closeTimeout = null;
+  let currentCategory = null;
+
+  // Show overlay with specific category panel
+  const showOverlay = (category) => {
+    // Clear any pending close
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      closeTimeout = null;
+    }
+
+    // Activate overlay
+    megaOverlay.classList.add("active");
+
+    // Only swap content if category changed
+    if (category !== currentCategory) {
+      // Hide all panels (visibility only, no DOM changes)
+      document.querySelectorAll(".mega-panel").forEach((panel) => {
+        panel.classList.remove("active");
+      });
+
+      // Show target panel
+      const targetPanel = document.getElementById(`panel-${category}`);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      }
+
+      // Update active nav item indicator
+      navItems.forEach((item) => {
+        if (item.dataset.category === category) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+
+      currentCategory = category;
+    }
+  };
+
+  // Hide overlay with delay for usability
+  const hideOverlay = () => {
+    closeTimeout = setTimeout(() => {
+      megaOverlay.classList.remove("active");
+      navItems.forEach((item) => item.classList.remove("active"));
+      currentCategory = null;
+    }, 150); // 150ms delay allows mouse to reach panel
+  };
+
+  // Nav item hover events
+  navItems.forEach((item) => {
+    const category = item.dataset.category;
+
+    item.addEventListener("mouseenter", () => {
+      showOverlay(category);
+    });
+
+    item.addEventListener("mouseleave", () => {
+      hideOverlay();
+    });
+  });
+
+  // Overlay hover events (keep open when mouse is on panel)
+  if (megaOverlay) {
+    megaOverlay.addEventListener("mouseenter", () => {
+      if (closeTimeout) {
+        clearTimeout(closeTimeout);
+        closeTimeout = null;
+      }
+    });
+
+    megaOverlay.addEventListener("mouseleave", () => {
+      hideOverlay();
+    });
+
+    // Close on click outside (on overlay background)
+    megaOverlay.addEventListener("click", (e) => {
+      if (e.target === megaOverlay) {
+        megaOverlay.classList.remove("active");
+        navItems.forEach((item) => item.classList.remove("active"));
+        currentCategory = null;
+      }
+    });
+  }
+
+  // Close overlay on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && megaOverlay?.classList.contains("active")) {
+      megaOverlay.classList.remove("active");
+      navItems.forEach((item) => item.classList.remove("active"));
+      currentCategory = null;
+    }
+  });
+
+  // ============================================
   // MOBILE MENU TOGGLE
   // ============================================
 
