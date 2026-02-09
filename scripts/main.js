@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // MOBILE MENU TOGGLE
   // ============================================
 
-  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const mobileToggle = document.getElementById("mobileToggle");
   const mobileMenu = document.getElementById("mobileMenu");
-  const mobileMenuBackdrop = document.getElementById("mobileMenuBackdrop");
+  const mobileBackdrop = document.getElementById("mobileBackdrop");
 
-  if (mobileMenuToggle && mobileMenu) {
+  if (mobileToggle && mobileMenu) {
     // Toggle menu open/close
     const toggleMobileMenu = (forceClose = false) => {
       const isActive = forceClose
@@ -52,33 +52,35 @@ document.addEventListener("DOMContentLoaded", () => {
         : !mobileMenu.classList.contains("active");
 
       mobileMenu.classList.toggle("active", isActive);
-      mobileMenuToggle.classList.toggle("active", isActive);
-      mobileMenuBackdrop.classList.toggle("active", isActive);
+      mobileToggle.classList.toggle("active", isActive);
+      if (mobileBackdrop) {
+        mobileBackdrop.classList.toggle("active", isActive);
+      }
 
       // Update ARIA
-      mobileMenuToggle.setAttribute("aria-expanded", isActive);
+      mobileToggle.setAttribute("aria-expanded", isActive);
 
       // Prevent body scroll when menu is open
       document.body.style.overflow = isActive ? "hidden" : "";
     };
 
     // Open/close menu on button click
-    mobileMenuToggle.addEventListener("click", () => {
+    mobileToggle.addEventListener("click", () => {
       toggleMobileMenu();
     });
 
     // Close menu when clicking backdrop
-    if (mobileMenuBackdrop) {
-      mobileMenuBackdrop.addEventListener("click", () => {
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener("click", () => {
         toggleMobileMenu(true);
       });
     }
 
-    // Close menu when clicking on direct links (not submenu toggle buttons)
-    const mobileMenuLinks = mobileMenu.querySelectorAll(
-      ".mobile-menu-item > a",
+    // Close menu when clicking on direct links (not submenu toggles)
+    const mobileDirectLinks = mobileMenu.querySelectorAll(
+      ".mobile-nav-item > a:not(.mobile-nav-toggle)",
     );
-    mobileMenuLinks.forEach((link) => {
+    mobileDirectLinks.forEach((link) => {
       link.addEventListener("click", () => {
         toggleMobileMenu(true);
       });
@@ -89,19 +91,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // MOBILE SUBMENU ACCORDION TOGGLES
   // ============================================
 
-  const submenuToggles = document.querySelectorAll(".mobile-submenu-toggle");
+  const mobileNavToggles = document.querySelectorAll(".mobile-nav-toggle");
 
-  submenuToggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const isExpanded = toggle.classList.contains("active");
+  mobileNavToggles.forEach((toggle) => {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parentItem = toggle.closest(".mobile-nav-item");
+      const isExpanded = parentItem.classList.contains("expanded");
       const submenu = toggle.nextElementSibling;
 
-      // Toggle active state
-      toggle.classList.toggle("active");
-      submenu.classList.toggle("active");
+      // Close other open submenus
+      document.querySelectorAll(".mobile-nav-item.expanded").forEach((item) => {
+        if (item !== parentItem) {
+          item.classList.remove("expanded");
+        }
+      });
 
-      // Update ARIA
-      toggle.setAttribute("aria-expanded", !isExpanded);
+      // Toggle current submenu
+      parentItem.classList.toggle("expanded", !isExpanded);
     });
   });
 

@@ -50,216 +50,231 @@
   </head>
   <body>
     <!-- ============================================
-       NAVIGATION - GLASSMORPHISM
+       AVIATION-GRADE GLASS NAVIGATION
        ============================================ -->
     <!-- Skip to Main Content (Accessibility) -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+    <nav
+      class="glass-nav"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div class="nav-container">
         <!-- Logo -->
-        <div class="nav-logo">
-          <a href="/">GARMIN</a>
-        </div>
+        <a href="/" class="brand-logo">GARMIN</a>
 
         <!-- Desktop Navigation Menu -->
-        <ul class="nav-menu" role="menubar">
-          <!-- Products - Mega Menu -->
-          <li class="nav-item has-mega-menu" role="none">
-            <a
-              href="#products"
-              role="menuitem"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Products</a
+        <ul class="nav-links">
+          <!-- Wearables - Mega Menu -->
+          <li class="nav-item">
+            <a href="#wearables" aria-haspopup="true" aria-expanded="false"
+              >Wearables</a
             >
 
-            <!-- Products Mega Menu -->
-            <div class="mega-menu" role="dialog" aria-label="Products menu">
-              <!-- Column 1: By Activity -->
-              <div class="mega-menu-column">
-                <h3>By Activity</h3>
-                <div class="activity-cards">
-                  <a href="/train" class="activity-card">
-                    <div class="activity-card-icon">🏃</div>
-                    <div class="activity-card-content">
-                      <div class="activity-card-title">Train</div>
-                      <div class="activity-card-desc">
-                        For runners, cyclists & triathletes
-                      </div>
-                      <span class="activity-card-link">→ View Watches</span>
-                    </div>
-                  </a>
-
-                  <a href="/explore" class="activity-card">
-                    <div class="activity-card-icon">⛰️</div>
-                    <div class="activity-card-content">
-                      <div class="activity-card-title">Explore</div>
-                      <div class="activity-card-desc">
-                        For hiking, trekking & outdoor adventure
-                      </div>
-                      <span class="activity-card-link">→ View Watches</span>
-                    </div>
-                  </a>
-
-                  <a href="/navigate" class="activity-card">
-                    <div class="activity-card-icon">🧭</div>
-                    <div class="activity-card-content">
-                      <div class="activity-card-title">Navigate</div>
-                      <div class="activity-card-desc">
-                        Aviation, Marine & Automotive
-                      </div>
-                      <span class="activity-card-link">→ View Products</span>
-                    </div>
-                  </a>
-
-                  <a href="/wellness" class="activity-card">
-                    <div class="activity-card-icon">❤️</div>
-                    <div class="activity-card-content">
-                      <div class="activity-card-title">Live Well</div>
-                      <div class="activity-card-desc">
-                        Health, lifestyle & wellness
-                      </div>
-                      <span class="activity-card-link">→ View Watches</span>
-                    </div>
-                  </a>
+            <!-- Wearables Mega Menu -->
+            <div class="mega-menu" role="dialog" aria-label="Wearables menu">
+              <div class="menu-content">
+                <!-- Column 1: Performance -->
+                <div class="menu-column">
+                  <h4>Performance</h4>
+                  <a href="/products/marq" class="menu-link">MARQ Collection</a>
+                  <a href="/products/fenix-8" class="menu-link">Fēnix 8</a>
+                  <a href="/products/epix" class="menu-link">Epix Pro</a>
+                  <a href="/products/enduro" class="menu-link">Enduro 3</a>
+                  <a href="/products/instinct" class="menu-link">Instinct 2X</a>
                 </div>
-              </div>
 
-              <!-- Column 2: By Product -->
-              <div class="mega-menu-column">
-                <h3>By Product</h3>
-                <div class="product-links">
-                  <a href="/smartwatches">Smartwatches</a>
-                  <a href="/fitness-watches">Fitness Watches</a>
-                  <a href="/running-watches">GPS Running Watches</a>
-                  <a href="/cycling">Cycling Computers</a>
-                  <a href="/golf">Golf Devices</a>
-                  <a href="/marine">Marine</a>
-                  <a href="/aviation">Aviation</a>
-                  <a href="/automotive">Automotive</a>
-                  <a href="/accessories">Accessories</a>
+                <!-- Column 2: Running & Fitness -->
+                <div class="menu-column">
+                  <h4>Running & Fitness</h4>
+                  <a href="/products/forerunner-965" class="menu-link"
+                    >Forerunner 965</a
+                  >
+                  <a href="/products/forerunner-265" class="menu-link"
+                    >Forerunner 265</a
+                  >
+                  <a href="/products/forerunner-165" class="menu-link"
+                    >Forerunner 165</a
+                  >
+                  <a href="/products/vivoactive" class="menu-link"
+                    >Vívoactive 5</a
+                  >
+                  <a href="/products/lily" class="menu-link">Lily 2</a>
                 </div>
-              </div>
 
-              <!-- Column 3: Featured Products -->
-              <div class="mega-menu-column">
-                <h3>Featured</h3>
-                <div class="featured-products">
-                  <a href="/products/fenix-8" class="featured-product">
+                <!-- Column 3: Lifestyle -->
+                <div class="menu-column">
+                  <h4>Lifestyle</h4>
+                  <a href="/products/venu-3" class="menu-link">Venu 3</a>
+                  <a href="/products/vivomove" class="menu-link"
+                    >Vívomove Trend</a
+                  >
+                  <a href="/kids" class="menu-link">Kids Watches</a>
+                  <a href="/accessories" class="menu-link">Accessories</a>
+                </div>
+
+                <!-- Column 4: Featured -->
+                <div class="menu-column">
+                  <h4>Featured</h4>
+                  <a href="/products/fenix-8" class="featured-card">
                     <img
                       src="./assets/images/products/fenix-8.png"
                       alt="Fēnix 8"
-                      class="featured-product-image"
                     />
-                    <div class="featured-product-name">Fēnix 8</div>
-                    <span class="featured-product-badge">NEW</span>
-                  </a>
-
-                  <a href="/products/forerunner-965" class="featured-product">
-                    <img
-                      src="./assets/images/products/forerunner-965.png"
-                      alt="Forerunner 965"
-                      class="featured-product-image"
-                    />
-                    <div class="featured-product-name">Forerunner 965</div>
-                    <span class="featured-product-badge">POPULAR</span>
+                    <span>New Fēnix 8 →</span>
                   </a>
                 </div>
               </div>
             </div>
           </li>
 
-          <!-- Technology - Simple Dropdown -->
-          <li class="nav-item has-dropdown" role="none">
-            <a
-              href="#technology"
-              role="menuitem"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Technology</a
+          <!-- Sports - Mega Menu -->
+          <li class="nav-item">
+            <a href="#sports" aria-haspopup="true" aria-expanded="false"
+              >Sports</a
             >
 
-            <!-- Technology Dropdown -->
-            <div
-              class="simple-dropdown"
-              role="menu"
-              aria-label="Technology menu"
-            >
-              <a href="/technology/gps" role="menuitem">GPS & Accuracy</a>
-              <a href="/technology/health" role="menuitem">Health Metrics</a>
-              <a href="/technology/battery" role="menuitem"
-                >Battery Innovation</a
-              >
-              <a href="/technology/ecosystem" role="menuitem"
-                >Garmin Ecosystem</a
-              >
+            <div class="mega-menu" role="dialog" aria-label="Sports menu">
+              <div class="menu-content">
+                <div class="menu-column">
+                  <h4>Cycling</h4>
+                  <a href="/cycling/edge-1050" class="menu-link">Edge 1050</a>
+                  <a href="/cycling/edge-540" class="menu-link">Edge 540/840</a>
+                  <a href="/cycling/rally" class="menu-link"
+                    >Rally Power Meters</a
+                  >
+                  <a href="/cycling/varia" class="menu-link"
+                    >Varia Radar Lights</a
+                  >
+                </div>
+
+                <div class="menu-column">
+                  <h4>Indoor Training</h4>
+                  <a href="/tacx/neo" class="menu-link">Tacx NEO 3M</a>
+                  <a href="/tacx/flux" class="menu-link">Tacx FLUX 2</a>
+                  <a href="/tacx/boost" class="menu-link">Tacx Boost</a>
+                  <a href="/hrm" class="menu-link">HRM Sensors</a>
+                </div>
+
+                <div class="menu-column">
+                  <h4>Golf</h4>
+                  <a href="/golf/approach-s70" class="menu-link"
+                    >Approach S70</a
+                  >
+                  <a href="/golf/approach-z82" class="menu-link"
+                    >Approach Z82</a
+                  >
+                  <a href="/golf/approach-r10" class="menu-link"
+                    >Approach R10</a
+                  >
+                </div>
+
+                <div class="menu-column">
+                  <h4>Featured</h4>
+                  <a href="/cycling/edge-1050" class="featured-card">
+                    <img
+                      src="./assets/images/products/edge-1050.png"
+                      alt="Edge 1050"
+                    />
+                    <span>Edge 1050 →</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </li>
 
-          <!-- Support - Simple Dropdown -->
-          <li class="nav-item has-dropdown" role="none">
-            <a
-              href="#support"
-              role="menuitem"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Support</a
+          <!-- Outdoor - Mega Menu -->
+          <li class="nav-item">
+            <a href="#outdoor" aria-haspopup="true" aria-expanded="false"
+              >Outdoor</a
             >
 
-            <!-- Support Dropdown -->
-            <div class="simple-dropdown" role="menu" aria-label="Support menu">
-              <a href="/support/centers" role="menuitem"
-                >Service Centers (India)</a
-              >
-              <a href="/support/warranty" role="menuitem"
-                >Warranty Information</a
-              >
-              <a href="/support/updates" role="menuitem">Software Updates</a>
-              <a href="/support/contact" role="menuitem">Contact Support</a>
-              <a href="/support/manuals" role="menuitem">Product Manuals</a>
-              <a href="/support/forum" role="menuitem">Community Forum</a>
+            <div class="mega-menu" role="dialog" aria-label="Outdoor menu">
+              <div class="menu-content">
+                <div class="menu-column">
+                  <h4>Handhelds</h4>
+                  <a href="/outdoor/gpsmap-67" class="menu-link">GPSMAP 67</a>
+                  <a href="/outdoor/montana-700" class="menu-link"
+                    >Montana 700</a
+                  >
+                  <a href="/outdoor/etrex" class="menu-link">eTrex Series</a>
+                  <a href="/outdoor/inreach" class="menu-link"
+                    >inReach Satellite</a
+                  >
+                </div>
+
+                <div class="menu-column">
+                  <h4>Dog & Tracking</h4>
+                  <a href="/dog/astro" class="menu-link">Astro Dog Tracker</a>
+                  <a href="/dog/alpha" class="menu-link">Alpha GPS</a>
+                  <a href="/outdoor/explore" class="menu-link">Explore Maps</a>
+                </div>
+
+                <div class="menu-column">
+                  <h4>Cameras</h4>
+                  <a href="/cameras/virb" class="menu-link">VIRB Action Cam</a>
+                  <a href="/cameras/dashcam" class="menu-link">Dash Cams</a>
+                </div>
+              </div>
             </div>
           </li>
 
-          <!-- About -->
-          <li class="nav-item" role="none">
-            <a href="/about" role="menuitem">About</a>
+          <!-- Automotive - Simple Link -->
+          <li class="nav-item">
+            <a href="/automotive">Automotive</a>
+          </li>
+
+          <!-- Marine - Simple Link -->
+          <li class="nav-item">
+            <a href="/marine">Marine</a>
+          </li>
+
+          <!-- Aviation - Simple Link -->
+          <li class="nav-item">
+            <a href="/aviation">Aviation</a>
           </li>
         </ul>
 
-        <!-- Right-Side Actions: Icons -->
-        <div class="nav-actions">
-          <button class="nav-icon search-icon" aria-label="Search">
+        <!-- Right-Side: Cowboy-Style Icons -->
+        <div class="nav-icons">
+          <!-- Search Icon (Ultra-thin stroke) -->
+          <button class="icon-btn search-btn" aria-label="Search">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
               <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.35-4.35"></path>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
 
-          <a href="/account" class="nav-icon account-icon" aria-label="Account">
+          <!-- Profile Icon -->
+          <button class="icon-btn profile-btn" aria-label="Account">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
-          </a>
+          </button>
 
-          <a href="/cart" class="nav-icon cart-icon" aria-label="Cart">
+          <!-- Cart Icon with Badge -->
+          <button class="icon-btn cart-btn" aria-label="Cart">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
               <circle cx="9" cy="21" r="1"></circle>
               <circle cx="20" cy="21" r="1"></circle>
@@ -268,12 +283,12 @@
               ></path>
             </svg>
             <span class="cart-count">0</span>
-          </a>
+          </button>
 
           <!-- Mobile Menu Toggle -->
           <button
-            class="mobile-menu-toggle"
-            id="mobileMenuToggle"
+            class="mobile-toggle"
+            id="mobileToggle"
             aria-label="Toggle mobile menu"
             aria-expanded="false"
           >
@@ -286,59 +301,87 @@
     </nav>
 
     <!-- Mobile Menu Panel -->
-    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
     <div
       class="mobile-menu"
       id="mobileMenu"
       role="navigation"
       aria-label="Mobile navigation"
     >
-      <ul class="mobile-menu-items">
-        <!-- Products -->
-        <li class="mobile-menu-item">
-          <button class="mobile-submenu-toggle" aria-expanded="false">
-            Products
-          </button>
+      <ul class="mobile-nav-links">
+        <!-- Wearables -->
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-toggle">
+            Wearables
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
           <div class="mobile-submenu">
-            <a href="/train">Train</a>
-            <a href="/explore">Explore</a>
-            <a href="/navigate">Navigate</a>
-            <a href="/wellness">Live Well</a>
-            <a href="/smartwatches">Smartwatches</a>
-            <a href="/cycling">Cycling Computers</a>
-            <a href="/golf">Golf Devices</a>
+            <a href="/products/fenix-8">Fēnix 8</a>
+            <a href="/products/epix">Epix Pro</a>
+            <a href="/products/forerunner-965">Forerunner 965</a>
+            <a href="/products/venu-3">Venu 3</a>
+            <a href="/products/instinct">Instinct 2X</a>
+            <a href="/products/lily">Lily 2</a>
           </div>
         </li>
 
-        <!-- Technology -->
-        <li class="mobile-menu-item">
-          <button class="mobile-submenu-toggle" aria-expanded="false">
-            Technology
-          </button>
+        <!-- Sports -->
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-toggle">
+            Sports
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
           <div class="mobile-submenu">
-            <a href="/technology/gps">GPS & Accuracy</a>
-            <a href="/technology/health">Health Metrics</a>
-            <a href="/technology/battery">Battery Innovation</a>
-            <a href="/technology/ecosystem">Garmin Ecosystem</a>
+            <a href="/cycling/edge-1050">Edge 1050</a>
+            <a href="/cycling/rally">Rally Power Meters</a>
+            <a href="/tacx/neo">Tacx NEO 3M</a>
+            <a href="/golf/approach-s70">Approach S70</a>
           </div>
         </li>
 
-        <!-- Support -->
-        <li class="mobile-menu-item">
-          <button class="mobile-submenu-toggle" aria-expanded="false">
-            Support
-          </button>
+        <!-- Outdoor -->
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-toggle">
+            Outdoor
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
           <div class="mobile-submenu">
-            <a href="/support/centers">Service Centers (India)</a>
-            <a href="/support/warranty">Warranty Information</a>
-            <a href="/support/updates">Software Updates</a>
-            <a href="/support/contact">Contact Support</a>
+            <a href="/outdoor/gpsmap-67">GPSMAP 67</a>
+            <a href="/outdoor/inreach">inReach Satellite</a>
+            <a href="/dog/astro">Astro Dog Tracker</a>
           </div>
         </li>
 
-        <!-- About -->
-        <li class="mobile-menu-item">
-          <a href="/about">About</a>
+        <!-- Direct Links -->
+        <li class="mobile-nav-item">
+          <a href="/automotive">Automotive</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/marine">Marine</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="/aviation">Aviation</a>
         </li>
       </ul>
     </div>
