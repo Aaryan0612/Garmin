@@ -1,39 +1,55 @@
 /* ============================================
-   FOOTER - PREMIUM MINIMAL STYLE
+   FOOTER - CLOSING CREDITS AESTHETIC
+   Calm, spacious, minimal, atmospheric
+   Should feel closer to ACT 6 than legal document
    ============================================ */
 
 .footer {
-  background: #0f172a; /* Dark Navy - explicit color */
-  color: var(--neutral-300);
-  padding: var(--spacing-12) 0 var(--spacing-8);
-  margin-top: var(--spacing-16);
+  background: linear-gradient(to bottom, #2a2a30 0%, #1f1f24 100%);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 120px 0 60px;
+  position: relative;
+  margin: 0;
+}
+
+/* Subtle grain for depth continuity */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.01;
+  pointer-events: none;
 }
 
 .footer-container {
-  max-width: var(--max-width);
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--container-padding);
+  padding: 0 var(--spacing-xl);
+  position: relative;
+  z-index: 1;
 }
 
 /* ============================================
-   FOOTER TOP - GRID LAYOUT
+   FOOTER TOP - CLEAN 3-COLUMN LAYOUT
+   Reduced density, generous breathing room
    ============================================ */
 
 .footer-top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-8);
-  padding-bottom: var(--spacing-10);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
+  gap: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-column h3 {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--white);
-  margin-bottom: var(--spacing-4);
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 24px;
 }
 
 .footer-links {
@@ -43,48 +59,48 @@
 }
 
 .footer-links li {
-  margin-bottom: var(--spacing-2);
+  margin-bottom: 14px;
 }
 
 .footer-links a {
-  color: var(--neutral-300);
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.6;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--teal-400);
+  color: var(--white);
 }
 
 /* ============================================
-   NEWSLETTER SUBSCRIPTION
+   NEWSLETTER - SUBTLE INLINE FORM
    ============================================ */
 
 .footer-newsletter {
-  margin-top: var(--spacing-6);
+  margin-top: 0;
 }
 
 .footer-newsletter p {
   font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: var(--spacing-3);
-  color: var(--neutral-400);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .newsletter-form {
   display: flex;
-  gap: var(--spacing-2);
-  margin-top: var(--spacing-3);
+  gap: 12px;
 }
 
 .newsletter-input {
   flex: 1;
-  padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
   color: var(--white);
   font-size: 14px;
   transition: all 0.3s ease;
@@ -92,136 +108,169 @@
 
 .newsletter-input:focus {
   outline: none;
-  border-color: var(--teal-400);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .newsletter-input::placeholder {
-  color: var(--neutral-500);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .newsletter-btn {
-  padding: 12px 24px;
-  background: var(--teal-500);
+  padding: 14px 28px;
+  background: transparent;
   color: var(--white);
-  border: none;
-  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
 
 .newsletter-btn:hover {
-  background: var(--teal-600);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================
-   FOOTER MIDDLE - SOCIAL LINKS
+   TRUST BADGES - INTEGRATED FROM TRUST STRIP
+   Subtle, not promotional
+   ============================================ */
+
+.footer-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  justify-content: center;
+}
+
+.footer-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+.footer-trust-badge svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+}
+
+/* ============================================
+   FOOTER MIDDLE - SOCIAL & COUNTRY
+   Thin monochrome icons, not filled
    ============================================ */
 
 .footer-middle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-6) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
 }
 
 .footer-social {
   display: flex;
-  gap: var(--spacing-3);
+  gap: 16px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  color: var(--neutral-300);
+  color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-link:hover {
-  background: var(--teal-500);
+  border-color: rgba(255, 255, 255, 0.25);
   color: var(--white);
-  transform: translateY(-3px);
 }
 
 .social-link svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 /* Country Selector */
 .footer-country {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
+  gap: 10px;
   padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .footer-country:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .footer-country svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.5;
 }
 
 .footer-country span {
-  font-size: 14px;
-  color: var(--white);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ============================================
-   FOOTER BOTTOM - COPYRIGHT \u0026 LEGAL
+   FOOTER BOTTOM - COPYRIGHT & LEGAL
+   Very low contrast, almost whispered
    ============================================ */
 
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--spacing-6);
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   flex-wrap: wrap;
-  gap: var(--spacing-4);
+  gap: 20px;
 }
 
 .footer-copyright {
-  font-size: 13px;
-  color: var(--neutral-500);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 400;
 }
 
 .footer-legal {
   display: flex;
-  gap: var(--spacing-4);
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .footer-legal a {
-  font-size: 13px;
-  color: var(--neutral-500);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-legal a:hover {
-  color: var(--teal-400);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* ============================================
@@ -229,36 +278,58 @@
    ============================================ */
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .footer {
+    padding: 80px 0 48px;
+  }
+
   .footer-top {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-6);
+    gap: 48px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 64px 0 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
   }
 
   .footer-middle {
     flex-direction: column;
-    gap: var(--spacing-4);
+    gap: 24px;
+    padding: 32px 0;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
   }
 
   .footer-legal {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-trust {
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 32px 0;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
   .footer {
-    padding: var(--spacing-8) 0 var(--spacing-6);
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-6);
+    padding: 48px 0 32px;
   }
 
   .newsletter-form {
@@ -267,6 +338,7 @@
 
   .newsletter-btn {
     width: 100%;
+    padding: 16px;
   }
 
   .footer-social {
@@ -277,7 +349,11 @@
   .footer-legal {
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-2);
+    gap: 12px;
+  }
+
+  .footer-trust-badge {
+    font-size: 12px;
   }
 }
 
@@ -289,7 +365,8 @@
 .social-link:focus,
 .newsletter-input:focus,
 .newsletter-btn:focus,
-.footer-legal a:focus {
-  outline: 2px solid var(--teal-400);
+.footer-legal a:focus,
+.footer-country:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
   outline-offset: 2px;
 }

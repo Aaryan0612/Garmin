@@ -704,105 +704,276 @@
       <!-- Scroll Indicator -->
       <div class="scroll-indicator" aria-hidden="true">Scroll</div>
     </section>
+    <!-- ============================================
+       ACT 2: TRANSITION BUFFER
+       Pressure chamber between hero and content
+       ============================================ -->
+    <section class="hero-transition" aria-hidden="true"></section>
 
     <!-- ============================================
-       SECTION 2: USER ROUTING CARDS
+       ACT 3: GARMIN UNIVERSE - WORLD GRID
+       Edge-to-edge category exploration
        ============================================ -->
-    <section class="user-routing section" id="routing">
-      <div class="container">
-        <h2 class="user-routing-title">Find Your Perfect Garmin</h2>
-
-        <div class="routing-cards">
-          <!-- TRAIN Card -->
-          <div class="routing-card scroll-reveal">
-            <svg
-              class="routing-card-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-            <h3 class="routing-card-title">TRAIN</h3>
-            <p class="routing-card-description">
-              For runners, cyclists, and triathletes
-            </p>
-            <a href="/train" class="routing-card-link">View Products</a>
+    <section class="world-grid" id="explore">
+      <div class="world-grid-container">
+        <!-- Wearables - Large left cell spanning 2 rows -->
+        <a href="/wearables" class="world-cell">
+          <img
+            src="./assets/images/world-grid/wearables.png"
+            alt="Wearables"
+            class="world-cell-image"
+            loading="lazy"
+          />
+          <div class="world-cell-content">
+            <h3 class="world-cell-category">Wearables</h3>
+            <span class="world-cell-cta">
+              Explore
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
           </div>
+        </a>
 
-          <!-- EXPLORE Card -->
-          <div class="routing-card scroll-reveal">
-            <svg
-              class="routing-card-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <polygon
-                points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
-              ></polygon>
-            </svg>
-            <h3 class="routing-card-title">EXPLORE</h3>
-            <p class="routing-card-description">
-              For hiking, trekking, and outdoor adventure
-            </p>
-            <a href="/explore" class="routing-card-link">View Products</a>
+        <!-- Sports & Fitness -->
+        <a href="/sports" class="world-cell">
+          <img
+            src="./assets/images/world-grid/sports.png"
+            alt="Sports & Fitness"
+            class="world-cell-image"
+            loading="lazy"
+          />
+          <div class="world-cell-content">
+            <h3 class="world-cell-category">Sports & Fitness</h3>
+            <span class="world-cell-cta">
+              Explore
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
           </div>
+        </a>
 
-          <!-- NAVIGATE Card -->
-          <div class="routing-card scroll-reveal">
-            <svg
-              class="routing-card-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-            </svg>
-            <h3 class="routing-card-title">NAVIGATE</h3>
-            <p class="routing-card-description">
-              For pilots, marine, and automotive
-            </p>
-            <a href="/navigate" class="routing-card-link">View Products</a>
+        <!-- Outdoor Recreation -->
+        <a href="/outdoor" class="world-cell">
+          <img
+            src="./assets/images/world-grid/outdoor.png"
+            alt="Outdoor Recreation"
+            class="world-cell-image"
+            loading="lazy"
+          />
+          <div class="world-cell-content">
+            <h3 class="world-cell-category">Outdoor</h3>
+            <span class="world-cell-cta">
+              Explore
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
           </div>
+        </a>
 
-          <!-- LIVE WELL Card -->
-          <div class="routing-card scroll-reveal">
-            <svg
-              class="routing-card-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-              ></path>
-            </svg>
-            <h3 class="routing-card-title">LIVE WELL</h3>
-            <p class="routing-card-description">
-              For health, lifestyle, and daily wellness
-            </p>
-            <a href="/wellness" class="routing-card-link">View Products</a>
+        <!-- Automotive -->
+        <a href="/automotive" class="world-cell">
+          <img
+            src="./assets/images/world-grid/automotive.png"
+            alt="Automotive"
+            class="world-cell-image"
+            loading="lazy"
+          />
+          <div class="world-cell-content">
+            <h3 class="world-cell-category">Automotive</h3>
+            <span class="world-cell-cta">
+              Explore
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
           </div>
+        </a>
+
+        <!-- Marine -->
+        <a href="/marine" class="world-cell">
+          <img
+            src="./assets/images/world-grid/marine.png"
+            alt="Marine"
+            class="world-cell-image"
+            loading="lazy"
+          />
+          <div class="world-cell-content">
+            <h3 class="world-cell-category">Marine</h3>
+            <span class="world-cell-cta">
+              Explore
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Aviation -->
+        <a href="/aviation" class="world-cell">
+          <img
+            src="./assets/images/world-grid/aviation.png"
+            alt="Aviation"
+            class="world-cell-image"
+            loading="lazy"
+          />
+          <div class="world-cell-content">
+            <h3 class="world-cell-category">Aviation</h3>
+            <span class="world-cell-cta">
+              Explore
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================
+       ACT 4: FEATURED PRODUCTS - LIFESTYLE SHOWCASE
+       Good Life Med inspired: bg image + floating cards
+       ============================================ -->
+    <section class="featured-products" id="products">
+      <!-- Full-width lifestyle background -->
+      <div class="featured-bg">
+        <img
+          src="./assets/images/featured-bg.png"
+          alt=""
+          loading="lazy"
+          aria-hidden="true"
+        />
+      </div>
+
+      <!-- Content Layer -->
+      <div class="featured-content">
+        <!-- Left side header -->
+        <div class="featured-header">
+          <span class="featured-eyebrow">01 · Featured Collection</span>
+          <h2 class="featured-title">Award-Winning Wearables</h2>
+          <p class="featured-description">
+            Discover the power of precision GPS and advanced health monitoring
+            to support your performance journey.
+          </p>
+        </div>
+
+        <!-- Products grid - 4 columns -->
+        <div class="products-grid">
+          <!-- Fēnix 8 -->
+          <article class="product-card scroll-reveal">
+            <div class="product-image-wrapper">
+              <img
+                src="./assets/images/products/fenix-8.png"
+                alt="Garmin Fēnix 8"
+                class="product-image"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="product-name">Fēnix 8</h3>
+            <p class="product-tagline">Ultimate Adventure Watch</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/fenix-8" class="product-cta">Learn more</a>
+            </div>
+          </article>
+
+          <!-- Forerunner 965 -->
+          <article class="product-card scroll-reveal">
+            <div class="product-image-wrapper">
+              <img
+                src="./assets/images/products/forerunner-965.png"
+                alt="Garmin Forerunner 965"
+                class="product-image"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="product-name">Forerunner 965</h3>
+            <p class="product-tagline">Premium Running Watch</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/forerunner-965" class="product-cta"
+                >Learn more</a
+              >
+            </div>
+          </article>
+
+          <!-- Venu 3 -->
+          <article class="product-card scroll-reveal">
+            <div class="product-image-wrapper">
+              <img
+                src="./assets/images/products/venu-3.png"
+                alt="Garmin Venu 3"
+                class="product-image"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="product-name">Venu 3</h3>
+            <p class="product-tagline">Lifestyle Smartwatch</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/venu-3" class="product-cta">Learn more</a>
+            </div>
+          </article>
+
+          <!-- Edge 1050 -->
+          <article class="product-card scroll-reveal">
+            <div class="product-image-wrapper">
+              <img
+                src="./assets/images/products/edge-1050.png"
+                alt="Garmin Edge 1050"
+                class="product-image"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="product-name">Edge 1050</h3>
+            <p class="product-tagline">Ultimate Cycling Computer</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/edge-1050" class="product-cta">Learn more</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ============================================
-       SECTION 3: CREDIBILITY STRIP
+       ACT 5: CREDIBILITY - INSTRUMENT PANEL
+       Mission control readouts, not infographics
        ============================================ -->
     <section class="credibility section" id="credibility">
       <div class="container">
-        <h2 class="credibility-title">Trusted by Champions Worldwide</h2>
-
         <div class="stats-grid">
           <div class="stat-item scroll-reveal">
             <div class="stat-number">35+</div>
@@ -815,130 +986,199 @@
           </div>
 
           <div class="stat-item scroll-reveal">
-            <div class="stat-number">90 Days</div>
-            <div class="stat-label">Battery Life</div>
+            <div class="stat-number">90</div>
+            <div class="stat-label">Days Battery Life</div>
           </div>
 
           <div class="stat-item scroll-reveal">
             <div class="stat-number">300M+</div>
-            <div class="stat-label">Devices Sold</div>
+            <div class="stat-label">Devices Worldwide</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================
-       SECTION 4: FEATURED PRODUCTS
+       ACT 5.5: OFF-ROAD PRODUCTS - ADVENTURE SHOWCASE
+       Same structure as wearables - lifestyle bg + cards
        ============================================ -->
-    <section class="featured-products section" id="products">
-      <div class="container">
-        <h2 class="featured-title">Award-Winning Wearables</h2>
+    <section class="featured-products offroad-section" id="offroad">
+      <!-- Full-width lifestyle background -->
+      <div class="featured-bg">
+        <img
+          src="./assets/images/offroad-bg.png"
+          alt=""
+          loading="lazy"
+          aria-hidden="true"
+        />
+      </div>
 
+      <!-- Content Layer -->
+      <div class="featured-content">
+        <!-- Left side header -->
+        <div class="featured-header">
+          <span class="featured-eyebrow">02 · Off-Road Collection</span>
+          <h2 class="featured-title">Conquer Every Trail</h2>
+          <p class="featured-description">
+            Navigate the uncharted with rugged GPS navigators and trackers built
+            for the most demanding off-road adventures.
+          </p>
+        </div>
+
+        <!-- Products grid - 4 columns -->
         <div class="products-grid">
-          <!-- Fēnix 8 -->
-          <div class="product-card scroll-reveal">
+          <!-- Tread XL -->
+          <article class="product-card scroll-reveal">
             <div class="product-image-wrapper">
               <img
-                src="./assets/images/products/fenix-8.png"
-                alt="Garmin Fēnix 8 Ultimate Adventure Watch"
+                src="./assets/images/products/tread-xl.png"
+                alt="Garmin Tread XL - Overland Edition"
                 class="product-image"
-              />
-              <img
-                src="./assets/images/products/fenix-8-lifestyle.jpg"
-                alt="Fēnix 8 lifestyle shot"
-                class="product-image-hover"
+                loading="lazy"
               />
             </div>
-            <h3 class="product-name">Fēnix 8</h3>
-            <p class="product-tagline">Ultimate Adventure Watch</p>
-            <p class="product-price">₹95,990</p>
-            <a href="/products/fenix-8" class="product-cta">Learn More</a>
-          </div>
+            <h3 class="product-name">Tread® XL</h3>
+            <p class="product-tagline">10" All-Terrain Navigator</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/tread-xl" class="product-cta">Learn more</a>
+            </div>
+          </article>
 
-          <!-- Forerunner 965 -->
-          <div class="product-card scroll-reveal">
+          <!-- Tread 2 -->
+          <article class="product-card scroll-reveal">
             <div class="product-image-wrapper">
               <img
-                src="./assets/images/products/forerunner-965.png"
-                alt="Garmin Forerunner 965 Premium Running Watch"
+                src="./assets/images/products/tread-2.png"
+                alt="Garmin Tread 2 - Overland Edition"
                 class="product-image"
-              />
-              <img
-                src="./assets/images/products/forerunner-965-lifestyle.jpg"
-                alt="Forerunner 965 lifestyle shot"
-                class="product-image-hover"
+                loading="lazy"
               />
             </div>
-            <h3 class="product-name">Forerunner 965</h3>
-            <p class="product-tagline">Premium Running Watch</p>
-            <p class="product-price">₹62,990</p>
-            <a href="/products/forerunner-965" class="product-cta"
-              >Learn More</a
-            >
-          </div>
+            <h3 class="product-name">Tread® 2</h3>
+            <p class="product-tagline">8" All-Terrain Navigator</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/tread-2" class="product-cta">Learn more</a>
+            </div>
+          </article>
 
-          <!-- Venu 3 -->
-          <div class="product-card scroll-reveal">
+          <!-- Overlander -->
+          <article class="product-card scroll-reveal">
             <div class="product-image-wrapper">
               <img
-                src="./assets/images/products/venu-3.png"
-                alt="Garmin Venu 3 Lifestyle Smartwatch"
+                src="./assets/images/products/overlander.png"
+                alt="Garmin Overlander"
                 class="product-image"
-              />
-              <img
-                src="./assets/images/products/venu-3-lifestyle.jpg"
-                alt="Venu 3 lifestyle shot"
-                class="product-image-hover"
+                loading="lazy"
               />
             </div>
-            <h3 class="product-name">Venu 3</h3>
-            <p class="product-tagline">Lifestyle Smartwatch</p>
-            <p class="product-price">₹48,990</p>
-            <a href="/products/venu-3" class="product-cta">Learn More</a>
-          </div>
+            <h3 class="product-name">Overlander®</h3>
+            <p class="product-tagline">Rugged GPS Navigator</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/overlander" class="product-cta">Learn more</a>
+            </div>
+          </article>
 
-          <!-- Edge 1050 -->
-          <div class="product-card scroll-reveal">
+          <!-- Montana 700 -->
+          <article class="product-card scroll-reveal">
             <div class="product-image-wrapper">
               <img
-                src="./assets/images/products/edge-1050.png"
-                alt="Garmin Edge 1050 Advanced Cycling Computer"
+                src="./assets/images/products/montana-700.png"
+                alt="Garmin Montana 700"
                 class="product-image"
-              />
-              <img
-                src="./assets/images/products/edge-1050-lifestyle.jpg"
-                alt="Edge 1050 lifestyle shot"
-                class="product-image-hover"
+                loading="lazy"
               />
             </div>
-            <h3 class="product-name">Edge 1050</h3>
-            <p class="product-tagline">Advanced Cycling Computer</p>
-            <p class="product-price">₹72,990</p>
-            <a href="/products/edge-1050" class="product-cta">Learn More</a>
-          </div>
+            <h3 class="product-name">Montana® 700</h3>
+            <p class="product-tagline">Handheld GPS Navigator</p>
+            <div class="product-cta-row">
+              <button class="product-cta-primary">Get Started</button>
+              <a href="/products/montana-700" class="product-cta">Learn more</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- ============================================
-       SECTION 5: INDIA TRUST STRIP
+       ACT 6: COMMUNITY - LIFESTYLE BELONGING
+       "You'll Never Ride Alone" Bento Grid
        ============================================ -->
-    <section class="trust-strip">
-      <div class="container">
-        <div class="trust-items">
-          <span class="trust-item">Authorized Garmin India</span>
-          <span class="trust-separator">|</span>
-          <span class="trust-item">2-Year Warranty</span>
-          <span class="trust-separator">|</span>
-          <span class="trust-item">Service Centers Across India</span>
-          <span class="trust-separator">|</span>
-          <span class="trust-item">EMI Available</span>
+    <section class="community section" id="community">
+      <div class="community-header">
+        <h2 class="community-title">You'll Never Train Alone</h2>
+        <p class="community-subtitle">
+          Join millions of athletes, adventurers, and professionals who trust
+          Garmin to push their limits.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        <!-- Bento grid with varied image sizes -->
+        <div class="community-cell">
+          <img
+            src="./assets/images/world-grid/wearables.png"
+            alt="Runner with GPS watch"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/world-grid/sports.png"
+            alt="Cyclist on mountain road"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/world-grid/outdoor.png"
+            alt="Hikers on mountain trail"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/world-grid/marine.png"
+            alt="Boating at sunset"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/world-grid/automotive.png"
+            alt="Driver with GPS navigation"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/world-grid/aviation.png"
+            alt="Pilot in cockpit"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/products/fenix-8-lifestyle.jpg"
+            alt="Athlete checking watch"
+            loading="lazy"
+          />
+        </div>
+        <div class="community-cell">
+          <img
+            src="./assets/images/products/forerunner-965-lifestyle.jpg"
+            alt="Runner in training"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
 
     <!-- ============================================
-       FOOTER
+       ACT 7: FOOTER - CLOSING CREDITS
+       Calm, spacious, atmospheric. Closer to ACT 6 than legal document.
        ============================================ -->
     <footer class="footer" id="footer" role="contentinfo">
       <div class="footer-container">
@@ -948,14 +1188,12 @@
           <div class="footer-column">
             <h3>Products</h3>
             <ul class="footer-links">
-              <li><a href="/smartwatches">Smartwatches</a></li>
-              <li><a href="/fitness-watches">Fitness Watches</a></li>
-              <li><a href="/running">GPS Running Watches</a></li>
-              <li><a href="/cycling">Cycling Computers</a></li>
-              <li><a href="/golf">Golf Devices</a></li>
+              <li><a href="/wearables">Wearables</a></li>
+              <li><a href="/sports">Sports & Fitness</a></li>
+              <li><a href="/outdoor">Outdoor</a></li>
+              <li><a href="/automotive">Automotive</a></li>
               <li><a href="/marine">Marine</a></li>
               <li><a href="/aviation">Aviation</a></li>
-              <li><a href="/automotive">Automotive</a></li>
             </ul>
           </div>
 
@@ -964,14 +1202,9 @@
             <h3>Support</h3>
             <ul class="footer-links">
               <li><a href="/support">Support Center</a></li>
-              <li><a href="/support/warranty">Warranty Information</a></li>
-              <li>
-                <a href="/support/service-centers">Service Centers (India)</a>
-              </li>
-              <li><a href="/support/software">Software Updates</a></li>
-              <li><a href="/support/manuals">Product Manuals</a></li>
-              <li><a href="/support/contact">Contact Us</a></li>
-              <li><a href="/support/faqs">FAQs</a></li>
+              <li><a href="/support/service-centers">Service Centers</a></li>
+              <li><a href="/support/warranty">Warranty</a></li>
+              <li><a href="/support/contact">Contact</a></li>
             </ul>
           </div>
 
@@ -981,11 +1214,8 @@
             <ul class="footer-links">
               <li><a href="/about">About Garmin</a></li>
               <li><a href="/careers">Careers</a></li>
-              <li><a href="/press">Press Room</a></li>
-              <li><a href="/blog">Garmin Blog</a></li>
+              <li><a href="/blog">Blog</a></li>
               <li><a href="/sustainability">Sustainability</a></li>
-              <li><a href="/partnerships">Partnerships</a></li>
-              <li><a href="/events">Events & Sponsorships</a></li>
             </ul>
           </div>
 
@@ -1012,6 +1242,57 @@
               </form>
             </div>
           </div>
+        </div>
+
+        <!-- Trust Badges - Integrated from trust strip -->
+        <div class="footer-trust">
+          <span class="footer-trust-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            Authorized Garmin India
+          </span>
+          <span class="footer-trust-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            2-Year Warranty
+          </span>
+          <span class="footer-trust-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Service Centers Across India
+          </span>
+          <span class="footer-trust-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+            EMI Available
+          </span>
         </div>
 
         <!-- Footer Middle - Social Links & Country -->
