@@ -10,15 +10,11 @@
 
 .hero-transition {
   position: relative;
-  min-height: 20vh;
-  height: clamp(20vh, 25vh, 30vh);
-  background: linear-gradient(
-    to bottom,
-    rgba(26, 26, 31, 0.95) 0%,
-    #242428 50%,
-    #2a2a30 100%
-  );
+  min-height: 0;
+  height: 0;
+  background: #2a2a30;
   overflow: hidden;
+  display: none;
 }
 
 /* Extremely subtle grain texture - felt, not seen */
@@ -44,22 +40,38 @@
 
 .world-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  min-height: 90vh;
-  gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, minmax(320px, 44vh));
+  min-height: 85vh;
+  gap: 3px;
 }
 
 .world-cell {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  min-height: 45vh;
 }
 
-/* First cell (Wearables) spans 2 rows - larger presence */
-.world-cell:first-child {
-  grid-row: span 2;
+/* Bento layout: balanced 2-row grid, no cell feels small or orphaned */
+/* Row 1: Wearables (5col) | Sports (4col) | Outdoor (3col) */
+.world-cell:nth-child(1) {
+  grid-column: span 5;
+}
+.world-cell:nth-child(2) {
+  grid-column: span 4;
+}
+.world-cell:nth-child(3) {
+  grid-column: span 3;
+}
+/* Row 2: Aviation (5col) | Automotive (4col) | Marine (3col) */
+.world-cell:nth-child(4) {
+  grid-column: span 5;
+}
+.world-cell:nth-child(5) {
+  grid-column: span 4;
+}
+.world-cell:nth-child(6) {
+  grid-column: span 3;
 }
 
 .world-cell-image {
@@ -509,47 +521,49 @@
 .community-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 180px);
+  grid-template-rows: repeat(2, 240px);
   gap: 4px;
   padding: 0;
 }
 
-/* Bento grid layout - varied sizes */
+/* Bento grid layout - balanced varied sizes */
 .community-cell {
   position: relative;
   overflow: hidden;
 }
 
+/* Row 1: Hero shot wide | two stacked right */
 .community-cell:nth-child(1) {
-  grid-column: span 3;
+  grid-column: span 5;
   grid-row: span 2;
 }
 .community-cell:nth-child(2) {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-.community-cell:nth-child(3) {
   grid-column: span 4;
   grid-row: span 1;
 }
+.community-cell:nth-child(3) {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+/* Row 2: fills under cells 2,3 */
 .community-cell:nth-child(4) {
   grid-column: span 3;
   grid-row: span 1;
 }
 .community-cell:nth-child(5) {
-  grid-column: span 2;
-  grid-row: span 2;
+  grid-column: span 4;
+  grid-row: span 1;
 }
 .community-cell:nth-child(6) {
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: span 1;
 }
 .community-cell:nth-child(7) {
   grid-column: span 4;
-  grid-row: span 2;
+  grid-row: span 1;
 }
 .community-cell:nth-child(8) {
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: span 1;
 }
 
@@ -593,18 +607,35 @@
 
 @media (max-width: 1024px) {
   .world-grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     min-height: auto;
   }
 
-  .world-cell {
+  .world-cell:nth-child(1) {
+    grid-column: span 6;
+    grid-row: span 1;
     min-height: 40vh;
   }
-
-  .world-cell:first-child {
-    grid-row: span 1;
-    grid-column: span 2;
+  .world-cell:nth-child(2) {
+    grid-column: span 3;
+    min-height: 30vh;
+  }
+  .world-cell:nth-child(3) {
+    grid-column: span 3;
+    min-height: 30vh;
+  }
+  .world-cell:nth-child(4) {
+    grid-column: span 6;
+    min-height: 40vh;
+  }
+  .world-cell:nth-child(5) {
+    grid-column: span 3;
+    min-height: 30vh;
+  }
+  .world-cell:nth-child(6) {
+    grid-column: span 3;
+    min-height: 30vh;
   }
 
   .products-grid {
@@ -614,7 +645,7 @@
 
   .community-grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 150px);
+    grid-template-rows: repeat(3, 160px);
   }
 
   .community-cell:nth-child(1) {
@@ -635,33 +666,35 @@
   }
   .community-cell:nth-child(5) {
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 1;
   }
   .community-cell:nth-child(6) {
     grid-column: span 2;
     grid-row: span 1;
   }
   .community-cell:nth-child(7) {
-    grid-column: span 4;
+    grid-column: span 3;
     grid-row: span 1;
   }
   .community-cell:nth-child(8) {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: span 1;
   }
 }
 
 @media (max-width: 768px) {
   .world-grid-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .world-cell {
-    min-height: 50vh;
+  .world-cell:nth-child(n) {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 40vh;
   }
 
-  .world-cell:first-child {
-    grid-column: span 1;
+  .world-cell:nth-child(1) {
+    grid-column: span 2 !important;
   }
 
   .world-cell-content {

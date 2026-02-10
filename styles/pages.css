@@ -1,0 +1,194 @@
+/* ============================================
+   GARMIN — Sub-Page Styles
+   Minimal structural CSS for generated pages.
+   No new design decisions — uses homepage palette.
+   ============================================ */
+
+/* ── Page Main Container ── */
+.page-main {
+  min-height: 100vh;
+  padding-top: 80px; /* below fixed nav */
+}
+
+/* ── Breadcrumbs ── */
+.page-breadcrumbs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 40px 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.02em;
+}
+
+.page-breadcrumbs a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.page-breadcrumbs a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.breadcrumb-sep {
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.page-breadcrumbs span:last-child {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Page Hero Section ── */
+.page-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 40px;
+}
+
+.page-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.page-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 640px;
+  line-height: 1.6;
+}
+
+/* ── Category Hero (Full-width gradient banner) ── */
+.category-hero {
+  text-align: center;
+  padding: 100px 40px 80px;
+}
+
+.category-hero .page-description {
+  margin: 0 auto;
+}
+
+/* ── Product Hero (Split layout) ── */
+.product-hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.product-hero-image {
+  flex: 1 1 300px;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.product-hero-info {
+  flex: 1 1 300px;
+}
+
+.product-hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.product-hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.product-hero-actions .btn-primary {
+  background: #fff;
+  color: #000;
+}
+
+.product-hero-actions .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.product-hero-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.product-hero-actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ── Legal Hero (Centered, narrower) ── */
+.legal-hero {
+  max-width: 800px;
+}
+
+/* ── Placeholder Section ── */
+.page-placeholder {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px 120px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 40px;
+}
+
+.page-placeholder p {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 40px 20px 30px;
+  }
+
+  .page-breadcrumbs {
+    padding: 16px 20px 0;
+  }
+
+  .product-hero {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .product-hero-image {
+    max-width: 100%;
+  }
+
+  .product-hero-actions {
+    flex-direction: column;
+  }
+
+  .category-hero {
+    padding: 60px 20px 50px;
+  }
+
+  .page-placeholder {
+    padding: 30px 20px 80px;
+  }
+}
