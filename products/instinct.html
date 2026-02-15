@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instinct 2X | Garmin India</title>
-    <meta name="description" content="Rugged, reliable outdoor GPS smartwatch built to MIL-STD-810 standards." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Rugged, reliable outdoor GPS smartwatch built to MIL-STD-810 standards."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -18,23 +25,169 @@
     <div id="mega-root"></div>
     <div id="mobile-root"></div>
 
-    <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../wearables.html">Wearables</a> <span class="breadcrumb-sep">›</span> <span>Instinct 2X</span></div>
-      <section class="page-hero product-hero">
-        
-        <div class="product-hero-info">
-          <h1 class="page-title">Instinct 2X</h1>
-          <p class="page-description">Rugged, reliable outdoor GPS smartwatch built to MIL-STD-810 standards.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+    <main class="page-main">
+      <!-- 1. Cinematic Hero Section -->
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source src="../assets/videos/hero-background.mp4" type="video/mp4" />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Rugged GPS Watch</span>
+          <h1 class="pd-title">Instinct 2X Solar</h1>
+          <p class="pd-subtitle">
+            Built tough to endure the elements with infinite battery life in
+            solar models.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/fenix-8.png"
+              alt="Instinct 2X Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹45,990</span>
+              <span class="pd-emi">EMI starts at ₹2,100/mo.</span>
+            </div>
+
+            <!-- Edition -->
+            <div class="config-group">
+              <span class="config-label">Edition</span>
+              <div class="config-options">
+                <button
+                  class="config-pill active"
+                  onclick="updatePrice(this, 'std')"
+                >
+                  Standard
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'tactical')"
+                >
+                  Tactical
+                </button>
+              </div>
+            </div>
+
+            <!-- Color -->
+            <div class="config-group">
+              <span class="config-label">Color</span>
+              <div class="config-options">
+                <button class="config-pill active">Graphite</button>
+                <button class="config-pill">Whitestone</button>
+                <button class="config-pill">Moss</button>
+                <button class="config-pill">Flame Red</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Solar -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Infinite Battery.</h3>
+              <p class="bento-desc">
+                Go longer than ever with solar charging that gives you infinite
+                battery life in smartwatch mode.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_solar.png"
+              alt="Solar"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 2: Torch -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Built-in Torch.</h3>
+              <p class="bento-desc">
+                Multi-LED flashlight to help guide your way in low-light
+                conditions.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_flashlight.png"
+              alt="Flashlight"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Tough -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Military Standard.</h3>
+              <p class="bento-desc">
+                Built to U.S. military standard 810 for thermal, shock and water
+                resistance.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_satellite.png"
+              alt="Rugged"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 4: Sports -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Built-in Sports Apps.</h3>
+              <p class="bento-desc">
+                Do whatever you love with preloaded activity profiles for
+                running, cycling, swimming, strength training and more.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_cycling.png"
+              alt="Sports"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <script>
+      function updatePrice(btn, edition) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+
+        const priceDisplay = document.getElementById("priceDisplay");
+        if (edition === "tactical") priceDisplay.textContent = "₹50,990";
+        if (edition === "std") priceDisplay.textContent = "₹45,990";
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 

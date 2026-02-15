@@ -1,0 +1,268 @@
+/* ============================================
+   QUICK VIEW MODAL
+   Apple-style premium popup
+   ============================================ */
+
+/* 1. The Backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark but not pitch black */
+  backdrop-filter: blur(12px); /* Heavy blur for focus */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10000; /* Force on top */
+}
+
+/* 2. The Modal Card */
+.modal-card {
+  background: var(--white);
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  transform: scale(0.92) translateY(20px);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease;
+  overflow: hidden; /* For image scaling */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.modal-backdrop.active .modal-card {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s ease;
+  color: var(--mid-gray);
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--deep-black);
+}
+
+.modal-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 3. Left Side: Visuals */
+.modal-visual {
+  flex: 1.2; /* Slightly larger than text area */
+  background: var(--off-white);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+/* 4. Right Side: Content */
+.modal-content-area {
+  flex: 1;
+  padding: 48px 48px 48px 0; /* Padding right/top/bottom, left is visual */
+  padding-left: 48px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Product Header */
+.modal-header {
+  margin-bottom: 32px;
+}
+
+.modal-eyebrow {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--adventure-orange);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.modal-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--deep-black);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.modal-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.modal-emi {
+  font-size: 13px;
+  color: var(--mid-gray);
+}
+
+/* CTA Buttons */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.btn-modal-primary {
+  background: var(--navy-blue);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-modal-primary:hover {
+  background: var(--teal-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 180, 204, 0.3);
+}
+
+.btn-modal-secondary {
+  background: transparent;
+  color: var(--navy-blue);
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid rgba(0, 47, 108, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-modal-secondary:hover {
+  border-color: var(--navy-blue);
+  background: rgba(0, 47, 108, 0.05);
+}
+
+/* 5. Rich Features List (Icon + Title + Desc) */
+.modal-features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* More space between items */
+  padding-top: 24px;
+  border-top: 1px solid var(--border-gray);
+  margin-right: 20px; /* Space for scrollbar */
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.feature-icon-wrapper {
+  width: 48px; /* Fixed width for alignment */
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-icon-wrapper svg {
+  width: 32px;
+  height: 32px;
+  color: var(--deep-black);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 17px; /* Apple-like header size */
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.feature-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--dark-gray);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .modal-card {
+    flex-direction: column;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .modal-visual {
+    padding: 30px;
+    height: 300px;
+    flex: none;
+  }
+
+  .modal-image {
+    max-height: 100%;
+  }
+
+  .modal-content-area {
+    padding: 32px;
+    flex: none;
+  }
+
+  .modal-title {
+    font-size: 28px;
+  }
+}

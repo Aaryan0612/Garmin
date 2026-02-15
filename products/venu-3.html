@@ -1,16 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Venu 3 | Garmin India</title>
-    <meta name="description" content="Lifestyle GPS smartwatch with stunning AMOLED display and comprehensive health monitoring." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Lifestyle GPS smartwatch with stunning AMOLED display and comprehensive health monitoring."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -19,22 +27,171 @@
     <div id="mobile-root"></div>
 
     <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../wearables.html">Wearables</a> <span class="breadcrumb-sep">›</span> <span>Venu 3</span></div>
-      <section class="page-hero product-hero">
-        <div class="product-hero-image"><img src="../assets/images/products/venu-3.png" alt="Venu 3" /></div>
-        <div class="product-hero-info">
-          <h1 class="page-title">Venu 3</h1>
-          <p class="page-description">Lifestyle GPS smartwatch with stunning AMOLED display and comprehensive health monitoring.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source
+            src="../assets/videos/Venu_3_Series_Garmin_720P.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Smart & Health</span>
+          <h1 class="pd-title">Venu 3</h1>
+          <p class="pd-subtitle">
+            Lifestyle GPS smartwatch with stunning AMOLED display and
+            comprehensive health monitoring.
+          </p>
+        </div>
+      </section>
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/venu-3.png"
+              alt="Venu 3 Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹50,490</span>
+              <span class="pd-emi">EMI starts at ₹2,400/mo.</span>
+            </div>
+
+            <!-- Size -->
+            <div class="config-group">
+              <span class="config-label">Size</span>
+              <div class="config-options">
+                <button
+                  class="config-pill active"
+                  onclick="updatePrice(this, 'venu3')"
+                >
+                  Venu 3 (45mm)
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'venu3s')"
+                >
+                  Venu 3S (41mm)
+                </button>
+              </div>
+            </div>
+
+            <!-- Colors -->
+            <div class="config-group">
+              <span class="config-label">Color</span>
+              <div class="config-options">
+                <button class="config-pill active">Whitestone</button>
+                <button class="config-pill">Black</button>
+                <button class="config-pill">Sage Grey</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Body Battery -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Body Battery™.</h3>
+              <p class="bento-desc">
+                See your energy levels throughout the day to know when your body
+                is charged up.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Sleep Coach -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Sleep Coach.</h3>
+              <p class="bento-desc">
+                Get a sleep score and personalized coaching for your sleep
+                needs.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_sleep.png"
+              alt="Sleep Coach"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Speaker -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Speaker & Mic.</h3>
+              <p class="bento-desc">
+                Make and take calls directly from your watch when paired with
+                your smartphone.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_speaker.png"
+              alt="Speaker"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 4: Wheelchair -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Wheelchair Mode.</h3>
+              <p class="bento-desc">
+                Tracks pushes rather than steps and includes push and handcycle
+                activities.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_health.png"
+              alt="Wheelchair Mode"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- Scripts -->
+    <script>
+      function updatePrice(btn, size) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+
+        // Price is same for both sizes usually, but logic exists for future
+        const priceDisplay = document.getElementById("priceDisplay");
+        priceDisplay.textContent = "₹50,490";
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 

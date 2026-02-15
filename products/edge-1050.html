@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edge 1050 | Garmin India</title>
-    <meta name="description" content="Premium GPS cycling computer with large touchscreen display and advanced performance metrics." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Premium GPS cycling computer with large touchscreen display and advanced performance metrics."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -18,23 +25,156 @@
     <div id="mega-root"></div>
     <div id="mobile-root"></div>
 
-    <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../sports-fitness.html">Sports & Fitness</a> <span class="breadcrumb-sep">›</span> <span>Edge 1050</span></div>
-      <section class="page-hero product-hero">
-        <div class="product-hero-image"><img src="../assets/images/products/edge-1050.png" alt="Edge 1050" /></div>
-        <div class="product-hero-info">
-          <h1 class="page-title">Edge 1050</h1>
-          <p class="page-description">Premium GPS cycling computer with large touchscreen display and advanced performance metrics.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+    <main class="page-main">
+      <!-- 1. Cinematic Hero Section -->
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source src="../assets/videos/hero-background.mp4" type="video/mp4" />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Premium Cycling Computer</span>
+          <h1 class="pd-title">Edge 1050</h1>
+          <p class="pd-subtitle">
+            Never stop cycling with the ultimate GPS cycling computer you can
+            depend on when you need it most.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/forerunner-965.png"
+              alt="Edge 1050 Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹69,990</span>
+              <span class="pd-emi">EMI starts at ₹3,300/mo.</span>
+            </div>
+
+            <!-- Bundle -->
+            <div class="config-group">
+              <span class="config-label">Bundle</span>
+              <div class="config-options">
+                <button
+                  class="config-pill active"
+                  onclick="updatePrice(this, 'dev')"
+                >
+                  Device Only
+                </button>
+                <button class="config-pill" onclick="updatePrice(this, 'bun')">
+                  Bundle
+                </button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Display -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Vivid Display.</h3>
+              <p class="bento-desc">
+                See your stats and maps in stunning detail on a bright, vivid
+                touchscreen display.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Navigation -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Superior Navigation.</h3>
+              <p class="bento-desc">
+                Ride like a local with ride type-specific maps and navigation.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_maps.png"
+              alt="Navigation"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Battery -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">20 Hours Battery.</h3>
+              <p class="bento-desc">
+                Ride farther, charge less. Get up to 20 hours of battery life in
+                demanding use cases.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_battery.png"
+              alt="Battery"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 4: Speaker -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Built-In Speaker.</h3>
+              <p class="bento-desc">
+                Hear verbal workout and navigation prompts, and alert riders and
+                pedestrians with a loud on-device bike bell.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_speaker.png"
+              alt="Speaker"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <script>
+      function updatePrice(btn, type) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+
+        const priceDisplay = document.getElementById("priceDisplay");
+        if (type === "bun") priceDisplay.textContent = "₹79,990";
+        if (type === "dev") priceDisplay.textContent = "₹69,990";
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 

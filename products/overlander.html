@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Overlander® | Garmin India</title>
-    <meta name="description" content="Rugged GPS navigator with topographic mapping for off-grid adventures." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Rugged GPS navigator with topographic mapping for off-grid adventures."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -18,26 +25,136 @@
     <div id="mega-root"></div>
     <div id="mobile-root"></div>
 
-    <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../automotive.html">Automotive</a> <span class="breadcrumb-sep">›</span> <span>Overlander®</span></div>
-      <section class="page-hero product-hero">
-        <div class="product-hero-image"><img src="../assets/images/products/overlander.png" alt="Overlander®" /></div>
-        <div class="product-hero-info">
-          <h1 class="page-title">Overlander®</h1>
-          <p class="page-description">Rugged GPS navigator with topographic mapping for off-grid adventures.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+    <main class="page-main">
+      <!-- 1. Cinematic Hero Section -->
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source src="../assets/videos/hero-background.mp4" type="video/mp4" />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">All-Terrain Navigation</span>
+          <h1 class="pd-title">Overlander</h1>
+          <p class="pd-subtitle">
+            On-road and off-road navigation with preloaded topography for North
+            and South America.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/fenix-8.png"
+              alt="Overlander Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹65,000</span>
+              <span class="pd-emi">EMI starts at ₹3,000/mo.</span>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Maps -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Turn-by-Turn.</h3>
+              <p class="bento-desc">
+                Get spoken turn-by-turn directions for on-road navigation and
+                topography for off-road guidance.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Build -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Rugged Build.</h3>
+              <p class="bento-desc">
+                Overlander is built to IP5X dust rating and MIL-STD-810 for drop
+                and shock.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_satellite.png"
+              alt="Rugged"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Pitch -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Pitch and Roll.</h3>
+              <p class="bento-desc">
+                Integrated pitch and roll gauges help you and your vehicle
+                navigate difficult terrain.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 4: InReach -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">InReach Pair.</h3>
+              <p class="bento-desc">
+                Pair with inReach satellite communicators for two-way text
+                messaging and interactive SOS.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_satellite.png"
+              alt="InReach"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 
+    <script>
+      function updatePrice(btn) {
+        // No options
+      }
+    </script>
     <script src="../scripts/shared-components.js"></script>
     <script src="../scripts/main.js"></script>
   </body>

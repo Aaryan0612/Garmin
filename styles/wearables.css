@@ -1,0 +1,335 @@
+/* ============================================
+   WEARABLES PAGE STYLES
+   Apple-inspired premium product cards & layout
+   ============================================ */
+
+/* ============================================
+   SECTION LAYOUT
+   ============================================ */
+
+.wearables-section {
+  padding: var(--spacing-4xl) 0;
+  position: relative; /* For overlay positioning */
+  background-color: var(--white); /* Fallback */
+  border-bottom: 1px solid var(--light-gray);
+}
+
+/* ============================================
+   PREMIUM BACKGROUNDS
+   ============================================ */
+
+.section-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Parallax effect for desktop */
+  background-attachment: fixed;
+  color: var(--white); /* White text on dark backgrounds */
+  border-bottom: none; /* Seamless look */
+}
+
+/* Dark Overlay to make content pop */
+.section-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 0;
+}
+
+/* Ensure content sits above overlay */
+.wearables-header,
+.wearables-scroll-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override text colors for dark backgrounds */
+.section-bg .section-title {
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-bg .section-link {
+  color: var(--white); /* Make link white */
+  opacity: 0.9;
+}
+
+.section-bg .section-link:hover {
+  opacity: 1;
+  text-decoration: none; /* Clean look */
+}
+
+/* Specific Backgrounds */
+.bg-performance {
+  background-image: url("../assets/images/world-grid/outdoor.png");
+}
+
+.bg-running {
+  background-image: url("../assets/images/world-grid/sports.png");
+}
+
+.bg-lifestyle {
+  background-image: url("../assets/images/featured-bg.png");
+  /* Lifestyle might need a lighter overlay if the image is bright, 
+     but let's stick to the dark premium look for consistency first. */
+}
+
+/* .alt-bg removed in favor of specific background images */
+
+.wearables-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-xl);
+  padding: 0 var(--container-padding);
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 600;
+  color: var(--deep-black);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+.section-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--teal-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.3s ease;
+}
+
+.section-link:hover {
+  gap: 10px;
+  text-decoration: underline;
+}
+
+.section-link::after {
+  content: "→";
+  transition: transform 0.3s ease;
+}
+
+.section-link:hover::after {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   HORIZONTAL SCROLL CONTAINER
+   Apple-style "filmstrip" feel
+   ============================================ */
+
+.wearables-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--spacing-lg);
+  padding: 0 var(--container-padding) var(--spacing-2xl); /* Bottom padding for shadow cutoff */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll iOS */
+  scrollbar-width: none; /* Firefox */
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.wearables-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   PRODUCT CARD
+   Clean, white, elevated
+   ============================================ */
+
+.w-card {
+  flex: 0 0 320px; /* Fixed width cards */
+  scroll-snap-align: start;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 480px; /* Consistent height */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.w-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Area */
+.w-card-image-wrapper {
+  flex: 1; /* Takes remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: var(--off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.w-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  mix-blend-mode: multiply; /* Helps integrate pngs on off-white */
+}
+
+.w-card:hover .w-card-image {
+  transform: scale(1.08);
+}
+
+/* Content Area */
+.w-card-content {
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--white);
+  height: 160px; /* Fixed height for text area */
+}
+
+/* Text Group */
+.w-card-text {
+  margin-bottom: auto;
+}
+
+.w-card-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--adventure-orange);
+  margin-bottom: 8px;
+}
+
+.w-card-eyebrow.new {
+  color: var(--success-green);
+}
+
+.w-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--deep-black);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.w-card-desc {
+  font-size: 14px;
+  color: var(--mid-gray);
+  line-height: 1.4;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Price & CTA Group */
+.w-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--light-gray);
+}
+
+.w-card-price {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.w-card-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.w-btn-buy {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  transition: background-color 0.2s ease;
+}
+
+.w-btn-buy:hover {
+  background-color: var(--teal-accent);
+}
+
+.w-link-learn {
+  color: #0066cc; /* Brighter Apple-like blue */
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.w-link-learn:hover {
+  text-decoration: underline;
+  color: #004499;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .wearables-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  .wearables-section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .wearables-scroll-container {
+    padding: 0 var(--spacing-md) var(--spacing-xl);
+    scroll-padding-left: var(--spacing-md);
+  }
+
+  .wearables-header {
+    padding: 0 var(--spacing-md);
+  }
+
+  .w-card {
+    flex: 0 0 280px;
+    height: 420px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,335 @@
+/* ============================================
+   PRODUCT DETAIL PAGE
+   Premium, Cinematic, Apple-inspired
+   ============================================ */
+
+/* 1. Cinematic Hero */
+.page-main {
+  padding-top: 0 !important;
+}
+
+.pd-hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--deep-black);
+  color: var(--white);
+}
+
+.pd-hero-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.pd-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: heroFadeIn 1.2s ease-out forwards;
+}
+
+.pd-eyebrow {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--adventure-orange);
+  margin-bottom: 16px;
+}
+
+.pd-title {
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 24px;
+  color: var(--white);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pd-subtitle {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Buying Configurator Section */
+.pd-buying-section {
+  padding: 80px 20px;
+  background: var(--white);
+}
+
+.pd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.pd-gallery {
+  position: sticky;
+  top: 100px;
+}
+
+.pd-main-image {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+/* Configurator Controls */
+.pd-config {
+  padding: 20px;
+}
+
+.pd-price-block {
+  margin-bottom: 40px;
+}
+
+.pd-price {
+  font-size: 32px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pd-emi {
+  font-size: 14px;
+  color: var(--mid-gray);
+}
+
+.config-group {
+  margin-bottom: 32px;
+}
+
+.config-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mid-gray);
+  margin-bottom: 12px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Pills for selection */
+.config-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.config-pill {
+  padding: 12px 24px;
+  border-radius: 200px;
+  border: 1px solid var(--border-gray);
+  background: transparent;
+  color: var(--deep-black);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.config-pill:hover {
+  border-color: var(--navy-blue);
+}
+
+.config-pill.active {
+  background: var(--navy-blue);
+  color: var(--white);
+  border-color: var(--navy-blue);
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.2);
+}
+
+/* Color Circles */
+.color-options {
+  display: flex;
+  gap: 16px;
+}
+
+.color-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent; /* Selection ring */
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.color-circle::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--bg-color); /* Defined inline */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.color-circle:hover {
+  transform: scale(1.1);
+}
+
+.color-circle.active {
+  border-color: var(--navy-blue);
+}
+
+/* CTAs */
+.pd-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.btn-pd-primary {
+  flex: 1;
+  background: var(--navy-blue);
+  color: var(--white);
+  padding: 16px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-pd-primary:hover {
+  background: var(--teal-accent);
+}
+
+/* 3. Bento Grid Features */
+.pd-features-section {
+  padding: 100px 20px;
+  background: var(--off-white);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 400px);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bento-card {
+  background: var(--white);
+  border-radius: 32px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.bento-large {
+  grid-column: span 2;
+}
+
+.bento-tall {
+  grid-row: span 2;
+}
+
+.bento-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+
+.bento-card:hover .bento-bg {
+  transform: scale(1.03);
+}
+
+.bento-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bento-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bento-content.dark {
+  color: var(--white);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bento-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.bento-desc {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pd-container {
+    grid-template-columns: 1fr;
+  }
+  .pd-gallery {
+    position: static;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .bento-large,
+  .bento-tall {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 400px;
+  }
+}

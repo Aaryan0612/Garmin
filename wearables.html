@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="0">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wearables | Garmin India</title>
-    <meta name="description" content="GPS smartwatches and fitness trackers designed for every lifestyle — from elite performance to everyday wellness." />
-    <link rel="icon" type="image/svg+xml" href="./assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="GPS smartwatches and fitness trackers designed for every lifestyle — from elite performance to everyday wellness."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
     <link rel="stylesheet" href="./styles/sections.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
-    <link rel="stylesheet" href="./styles/pages.css" />
+    <link rel="stylesheet" href="./styles/wearables.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -19,18 +28,415 @@
     <div id="mobile-root"></div>
 
     <main class="page-main" id="main-content">
-      <section class="page-hero category-hero">
-        <h1 class="page-title">Wearables</h1>
-        <p class="page-description">GPS smartwatches and fitness trackers designed for every lifestyle — from elite performance to everyday wellness.</p>
+      <!-- ============================================
+           HERO SECTION
+           Reused from Home Page for consistency
+           ============================================ -->
+      <section class="hero" id="hero" role="banner">
+        <!-- Video Background -->
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-hidden="true"
+        >
+          <source
+            src="./assets/videos/a_Cinematic_Fitness_Video...SONY_FX6_720p.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <!-- Overlay -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-headline">Wearables for<br />Every Passion.</h1>
+            <p class="hero-subheadline">
+              From elite triathletes to weekend adventurers, discover the
+              smartwatch built for your lifestyle.
+            </p>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" aria-hidden="true">Scroll</div>
       </section>
-      <section class="page-placeholder">
-        <p>Products, subcategories, and featured collections will be added in a future phase.</p>
+
+      <!-- ============================================
+           SECTION 1: PERFORMANCE WATCHES
+           ============================================ -->
+      <section class="wearables-section section-bg bg-performance">
+        <div class="wearables-header">
+          <h2 class="section-title">Performance Watches.</h2>
+          <a href="#" class="section-link">Shop all Performance</a>
+        </div>
+
+        <div class="wearables-scroll-container">
+          <!-- Card 1 -->
+          <div class="w-card" data-id="fenix-8">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/fenix-8.png"
+                alt="Fenix 8"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow new">New</span>
+                <h3 class="w-card-title">Fēnix 8</h3>
+                <p class="w-card-desc">
+                  Ultimate adventure smartwatch with AMOLED display and LED
+                  flashlight.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹86,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 (Placeholder using same image) -->
+          <div class="w-card" data-id="epix-pro">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/fenix-8.png"
+                alt="Epix Pro"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Best Seller</span>
+                <h3 class="w-card-title">Epix Pro</h3>
+                <p class="w-card-desc">
+                  High-performance GPS watch with stunning AMOLED display.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹89,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 (Placeholder) -->
+          <div class="w-card" data-id="enduro-2">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/fenix-8.png"
+                alt="Enduro 2"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Ultra Endurance</span>
+                <h3 class="w-card-title">Enduro 2</h3>
+                <p class="w-card-desc">
+                  Extreme battery life for the longest races.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹99,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 (Placeholder) -->
+          <div class="w-card" data-id="instinct-2x">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/fenix-8.png"
+                alt="Instinct 2X"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Rugged</span>
+                <h3 class="w-card-title">Instinct 2X</h3>
+                <p class="w-card-desc">
+                  Built tough with unlimited battery life in smartwatch mode.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹45,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION 2: RUNNING AND FITNESS
+           ============================================ -->
+      <section class="wearables-section section-bg bg-running">
+        <div class="wearables-header">
+          <h2 class="section-title">Running & Fitness.</h2>
+          <a href="#" class="section-link">Shop all Running</a>
+        </div>
+
+        <div class="wearables-scroll-container">
+          <!-- Card 1 -->
+          <div class="w-card" data-id="forerunner-965">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/forerunner-965.png"
+                alt="Forerunner 965"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow new">Top Pick</span>
+                <h3 class="w-card-title">Forerunner 965</h3>
+                <p class="w-card-desc">
+                  Premium running smartwatch with colorful AMOLED display.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹67,490</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-card" data-id="forerunner-265">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/forerunner-965.png"
+                alt="Forerunner 265"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Advanced</span>
+                <h3 class="w-card-title">Forerunner 265</h3>
+                <p class="w-card-desc">
+                  Train brilliantly with an AMOLED display and training metrics.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹50,490</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="w-card" data-id="forerunner-165">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/forerunner-965.png"
+                alt="Forerunner 165"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Entry Level</span>
+                <h3 class="w-card-title">Forerunner 165</h3>
+                <p class="w-card-desc">
+                  Purpose-built GPS running smartwatch with essential features.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹28,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION 3: LIFESTYLE
+           ============================================ -->
+      <section class="wearables-section section-bg bg-lifestyle">
+        <div class="wearables-header">
+          <h2 class="section-title">Lifestyle Watches.</h2>
+          <a href="#" class="section-link">Shop all Lifestyle</a>
+        </div>
+
+        <div class="wearables-scroll-container">
+          <!-- Card 1 -->
+          <div class="w-card" data-id="venu-3">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/venu-3.png"
+                alt="Venu 3"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow new">Smart & Health</span>
+                <h3 class="w-card-title">Venu 3</h3>
+                <p class="w-card-desc">
+                  Know the real you with advanced health and fitness features.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹50,490</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="w-card" data-id="vivoactive-5">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/venu-3.png"
+                alt="Vivoactive 5"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Everyday</span>
+                <h3 class="w-card-title">Vívoactive 5</h3>
+                <p class="w-card-desc">
+                  GPS smartwatch with a bright, colorful display and up to 11
+                  days battery.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹31,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="w-card" data-id="lily-2">
+            <div class="w-card-image-wrapper">
+              <img
+                src="./assets/images/products/venu-3.png"
+                alt="Lily 2"
+                class="w-card-image"
+              />
+            </div>
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Fashion</span>
+                <h3 class="w-card-title">Lily 2</h3>
+                <p class="w-card-desc">
+                  The small, stylish smartwatch with hidden display and
+                  patterned lens.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹27,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="#" class="w-link-learn">Learn more ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- ============================================
+         QUICK VIEW MODAL OVERLAY
+         ============================================ -->
+    <div class="modal-backdrop" id="quickViewModal" aria-hidden="true">
+      <div
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Left: Image -->
+        <div class="modal-visual">
+          <img src="" alt="Product Image" class="modal-image" id="modalImage" />
+        </div>
+
+        <!-- Right: Content -->
+        <div class="modal-content-area">
+          <div class="modal-header">
+            <span class="modal-eyebrow" id="modalEyebrow">Collection</span>
+            <h2 class="modal-title" id="modalTitle">Product Name</h2>
+            <div class="modal-price-row">
+              <span class="modal-price" id="modalPrice">₹00,000</span>
+              <span class="modal-emi">EMI available</span>
+            </div>
+
+            <div class="modal-actions">
+              <button class="btn-modal-primary" id="modalBuyBtn">
+                Buy Now
+              </button>
+              <a href="#" class="btn-modal-secondary" id="modalFullDetailsBtn"
+                >Explore further</a
+              >
+            </div>
+
+            <div class="modal-features" id="modalFeatures">
+              <!-- Features injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 
     <script src="./scripts/shared-components.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/wearables.js"></script>
   </body>
 </html>

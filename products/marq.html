@@ -1,16 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MARQ Collection | Garmin India</title>
-    <meta name="description" content="Luxury tool watches crafted from premium materials with purpose-built features." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Luxury tool watches crafted from premium materials with purpose-built features."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -19,22 +27,190 @@
     <div id="mobile-root"></div>
 
     <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../wearables.html">Wearables</a> <span class="breadcrumb-sep">›</span> <span>MARQ Collection</span></div>
-      <section class="page-hero product-hero">
-        
-        <div class="product-hero-info">
-          <h1 class="page-title">MARQ Collection</h1>
-          <p class="page-description">Luxury tool watches crafted from premium materials with purpose-built features.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source
+            src="../assets/videos/Garmin_MARQ_Commander_Gen_2_Carbon_Edition_The_Quest_for_Excellence_Has_a_New_Badge_of_Honor_720P.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Luxury Tool Watch</span>
+          <h1 class="pd-title">MARQ Collection</h1>
+          <p class="pd-subtitle">
+            Luxury tool watches crafted from premium materials with
+            purpose-built features.
+          </p>
+        </div>
+      </section>
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/fenix-8.png"
+              alt="MARQ Commander Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹1,94,990</span>
+              <span class="pd-emi">EMI starts at ₹9,500/mo.</span>
+            </div>
+
+            <!-- Collection -->
+            <div class="config-group">
+              <span class="config-label">Collection</span>
+              <div class="config-options">
+                <button
+                  class="config-pill active"
+                  onclick="updatePrice(this, 'commander')"
+                >
+                  Commander
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'athlete')"
+                >
+                  Athlete
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'adventurer')"
+                >
+                  Adventurer
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'golfer')"
+                >
+                  Golfer
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'captain')"
+                >
+                  Captain
+                </button>
+              </div>
+            </div>
+
+            <!-- Material -->
+            <div class="config-group">
+              <span class="config-label">Material</span>
+              <div class="config-options">
+                <button class="config-pill active">Grade 5 Titanium</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Material -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Grade 5 Titanium.</h3>
+              <p class="bento-desc">
+                The hardest, strongest titanium we've ever used. Precision
+                crafted for excellence.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Sapphire -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Domed Sapphire.</h3>
+              <p class="bento-desc">
+                A crystal clear, scratch-resistant lens that flows seamlessly
+                into the bezel.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_health.png"
+              alt="Sapphire"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Jet Lag -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Jet Lag Adviser.</h3>
+              <p class="bento-desc">
+                Minimize the effects of jet lag with guidance on light exposure,
+                sleep and exercise.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_aviation.png"
+              alt="Jet Lag"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 4: Amoled -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Stunning AMOLED.</h3>
+              <p class="bento-desc">
+                A brilliant touchscreen display with traditional button
+                controls.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_maps.png"
+              alt="AMOLED"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- Scripts -->
+    <script>
+      function updatePrice(btn, model) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+
+        const priceDisplay = document.getElementById("priceDisplay");
+        if (model === "athlete") priceDisplay.textContent = "₹1,94,990";
+        if (model === "adventurer") priceDisplay.textContent = "₹2,09,990";
+        if (model === "golfer") priceDisplay.textContent = "₹2,24,990";
+        if (model === "captain") priceDisplay.textContent = "₹2,14,990";
+        if (model === "commander") priceDisplay.textContent = "₹2,04,990"; // Carbon Edition
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 

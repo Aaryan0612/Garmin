@@ -25,7 +25,7 @@
     ) {
       return href;
     }
-    if (href === "/") return base + "/index.html";
+    if (href === "/" || href === "./") return base + "/index.html";
     // Handle paths that map to directory/index.html
     if (indexPaths.includes(href)) {
       const clean = href.substring(1);
@@ -109,7 +109,7 @@
   const megaHTML = `
     <div class="mega-overlay" id="megaOverlay" role="dialog" aria-label="Navigation menu">
       <div class="mega-container">
-        <!-- WEARABLES -->
+            <!-- WEARABLES -->
         <div class="mega-panel" id="panel-wearables">
           <div class="mega-grid">
             <div class="menu-column">
@@ -134,13 +134,6 @@
               <a href="/products/vivomove" class="menu-link">Vívomove Trend</a>
               <a href="/kids" class="menu-link">Kids Watches</a>
               <a href="/accessories" class="menu-link">Accessories</a>
-            </div>
-            <div class="menu-featured">
-              <h4>Featured</h4>
-              <a href="/products/fenix-8" class="featured-card">
-                <img src="./assets/images/products/fenix-8.png" alt="Fēnix 8" />
-                <span>New Fēnix 8</span>
-              </a>
             </div>
           </div>
           <div class="mega-footer">
@@ -173,13 +166,6 @@
               <a href="/golf/approach-z82" class="menu-link">Approach Z82</a>
               <a href="/golf/approach-r10" class="menu-link">Approach R10</a>
             </div>
-            <div class="menu-featured">
-              <h4>Featured</h4>
-              <a href="/cycling/edge-1050" class="featured-card">
-                <img src="./assets/images/products/edge-1050.png" alt="Edge 1050" />
-                <span>Edge 1050</span>
-              </a>
-            </div>
           </div>
           <div class="mega-footer">
             <a href="/sports/compare">Compare Sports Devices</a>
@@ -208,13 +194,6 @@
               <h4>Cameras</h4>
               <a href="/cameras/virb" class="menu-link">VIRB Action Cam</a>
               <a href="/cameras/dashcam" class="menu-link">Dash Cams</a>
-            </div>
-            <div class="menu-featured">
-              <h4>Featured</h4>
-              <a href="/outdoor/inreach" class="featured-card">
-                <img src="./assets/images/products/inreach.png" alt="inReach Messenger" />
-                <span>inReach Messenger</span>
-              </a>
             </div>
           </div>
           <div class="mega-footer">

@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lily 2 | Garmin India</title>
-    <meta name="description" content="Small, stylish smartwatch designed for women with essential health and fitness tracking." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Small, stylish smartwatch designed for women with essential health and fitness tracking."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -19,22 +26,169 @@
     <div id="mobile-root"></div>
 
     <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../wearables.html">Wearables</a> <span class="breadcrumb-sep">›</span> <span>Lily 2</span></div>
-      <section class="page-hero product-hero">
-        
-        <div class="product-hero-info">
-          <h1 class="page-title">Lily 2</h1>
-          <p class="page-description">Small, stylish smartwatch designed for women with essential health and fitness tracking.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+      <!-- 1. Cinematic Hero Section -->
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source
+            src="../assets/videos/Venu_3_Series_Garmin_720P.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Smart Fashion</span>
+          <h1 class="pd-title">Lily 2</h1>
+          <p class="pd-subtitle">
+            The small, stylish smartwatch. With a flick of your wrist, the
+            stylish patterned lens lights up to reveal a bright touchscreen
+            display.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/venu-3.png"
+              alt="Lily 2 Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹27,990</span>
+              <span class="pd-emi">EMI starts at ₹1,300/mo.</span>
+            </div>
+
+            <!-- Band -->
+            <div class="config-group">
+              <span class="config-label">Band Type</span>
+              <div class="config-options">
+                <button
+                  class="config-pill active"
+                  onclick="updatePrice(this, 'nylon')"
+                >
+                  Nylon
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'leather')"
+                >
+                  Leather
+                </button>
+              </div>
+            </div>
+
+            <!-- Color -->
+            <div class="config-group">
+              <span class="config-label">Color</span>
+              <div class="config-options">
+                <button class="config-pill active">Cream Gold / Coconut</button>
+                <button class="config-pill">Dark Bronze / Mulberry</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Design -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Small & Stylish.</h3>
+              <p class="bento-desc">
+                The first-of-its-kind smartwatch with a small 35mm case and
+                patterned lens.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Health -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Health Monitoring.</h3>
+              <p class="bento-desc">
+                Understand your body by monitoring your respiration, Pulse Ox,
+                energy levels and more.
+              </p>
+            </div>
+            <img
+              src="../assets/images/bento_bg_health.png"
+              alt=""
+              class="bento-bg"
+            />
+          </div>
+
+          <!-- Card 3: Battery -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">5 Days Battery.</h3>
+              <p class="bento-desc">
+                Stay on the move longer with a battery life that lasts up to 5
+                days.
+              </p>
+            </div>
+            <img
+              src="../assets/images/bento_bg_utility.png"
+              alt=""
+              class="bento-bg"
+            />
+          </div>
+
+          <!-- Card 4: Sport -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Sports Apps.</h3>
+              <p class="bento-desc">
+                Track yoga, Pilates, cardio, mindful breathing and more with
+                sports apps.
+              </p>
+            </div>
+            <img
+              src="../assets/images/bento_bg_active.png"
+              alt=""
+              class="bento-bg"
+            />
+          </div>
+        </div>
       </section>
     </main>
+
+    <script>
+      function updatePrice(btn, band) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+
+        const priceDisplay = document.getElementById("priceDisplay");
+        if (band === "leather") priceDisplay.textContent = "₹31,990";
+        if (band === "nylon") priceDisplay.textContent = "₹27,990";
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 

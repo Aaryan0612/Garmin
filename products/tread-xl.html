@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tread® XL | Garmin India</title>
-    <meta name="description" content="10-inch all-terrain GPS navigator built for overlanding and off-road adventures." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="10-inch all-terrain GPS navigator built for overlanding and off-road adventures."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -18,23 +25,168 @@
     <div id="mega-root"></div>
     <div id="mobile-root"></div>
 
-    <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../automotive.html">Automotive</a> <span class="breadcrumb-sep">›</span> <span>Tread® XL</span></div>
-      <section class="page-hero product-hero">
-        <div class="product-hero-image"><img src="../assets/images/products/tread-xl.png" alt="Tread® XL" /></div>
-        <div class="product-hero-info">
-          <h1 class="page-title">Tread® XL</h1>
-          <p class="page-description">10-inch all-terrain GPS navigator built for overlanding and off-road adventures.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+    <main class="page-main">
+      <!-- 1. Cinematic Hero Section -->
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source src="../assets/videos/hero-background.mp4" type="video/mp4" />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Baja Race Navigator</span>
+          <h1 class="pd-title">Tread XL - Baja Race</h1>
+          <p class="pd-subtitle">
+            High-performance off-road racing navigator with 10" ultrabright
+            display and team tracking.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/fenix-8.png"
+              alt="Tread XL Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹85,000</span>
+              <span class="pd-emi">EMI starts at ₹3,900/mo.</span>
+            </div>
+
+            <!-- Edition -->
+            <div class="config-group">
+              <span class="config-label">Edition</span>
+              <div class="config-options">
+                <button
+                  class="config-pill active"
+                  onclick="updatePrice(this, 'baja')"
+                >
+                  Baja Race
+                </button>
+                <button
+                  class="config-pill"
+                  onclick="updatePrice(this, 'chase')"
+                >
+                  Baja Chase
+                </button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Screen -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">10" Ultrabright.</h3>
+              <p class="bento-desc">
+                Massive 10-inch ultrabright touchscreen display built for
+                off-road racing.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Tracking -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Team Tracking.</h3>
+              <p class="bento-desc">
+                See the live positions of your race team vehicles with built-in
+                inReach technology.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_satellite.png"
+              alt="Tracking"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Tough -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Race Tough.</h3>
+              <p class="bento-desc">
+                Rugged enough to handle the Baja 1000, with IP67 rating and dust
+                proofing.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+            <img
+              src="../assets/images/feature_satellite.png"
+              alt="Rugged"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 4: Maps -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Satellite Imagery.</h3>
+              <p class="bento-desc">
+                Downloadable high-resolution satellite imagery for superior
+                terrain awareness.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_maps.png"
+              alt="Satellite Maps"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <script>
+      function updatePrice(btn, edition) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+
+        const priceDisplay = document.getElementById("priceDisplay");
+        if (edition === "chase") priceDisplay.textContent = "₹89,990";
+        if (edition === "baja") priceDisplay.textContent = "₹85,000";
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 

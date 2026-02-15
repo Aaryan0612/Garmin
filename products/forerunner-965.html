@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-depth="1">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forerunner 965 | Garmin India</title>
-    <meta name="description" content="Premium GPS running and triathlon smartwatch with AMOLED display and advanced training metrics." />
-    <link rel="icon" type="image/svg+xml" href="../assets/logo/garmin-icon.svg" />
+    <meta
+      name="description"
+      content="Premium GPS running and triathlon smartwatch with AMOLED display and advanced training metrics."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/logo/garmin-icon.svg"
+    />
     <link rel="stylesheet" href="../styles/globals.css" />
     <link rel="stylesheet" href="../styles/navigation.css" />
     <link rel="stylesheet" href="../styles/sections.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/pages.css" />
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- Shared Nav (injected by JS) -->
@@ -18,23 +25,160 @@
     <div id="mega-root"></div>
     <div id="mobile-root"></div>
 
-    <main class="page-main" id="main-content">
-      <div class="page-breadcrumbs"><a href="../index.html">Home</a> <span class="breadcrumb-sep">›</span> <a href="../wearables.html">Wearables</a> <span class="breadcrumb-sep">›</span> <span>Forerunner 965</span></div>
-      <section class="page-hero product-hero">
-        <div class="product-hero-image"><img src="../assets/images/products/forerunner-965.png" alt="Forerunner 965" /></div>
-        <div class="product-hero-info">
-          <h1 class="page-title">Forerunner 965</h1>
-          <p class="page-description">Premium GPS running and triathlon smartwatch with AMOLED display and advanced training metrics.</p>
-          <div class="product-hero-actions">
-            <button class="btn btn-primary">Buy Now</button>
-            <button class="btn btn-secondary">Compare</button>
+    <main class="page-main">
+      <!-- 1. Cinematic Hero Section -->
+      <section class="pd-hero">
+        <video class="pd-hero-media" autoplay muted loop playsinline>
+          <source
+            src="../assets/videos/Forerunner_165_Day_One_Garmin_720P.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div class="pd-hero-content">
+          <span class="pd-eyebrow">Premium Running</span>
+          <h1 class="pd-title">Forerunner 965</h1>
+          <p class="pd-subtitle">
+            Train brilliantly with a bright AMOLED display and premium running
+            metrics.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. Buying Configurator -->
+      <section class="pd-buying-section">
+        <div class="pd-container">
+          <!-- Left: Gallery -->
+          <div class="pd-gallery">
+            <img
+              src="../assets/images/products/forerunner-965.png"
+              alt="Forerunner 965 Front View"
+              class="pd-main-image"
+              id="productImage"
+            />
+          </div>
+
+          <!-- Right: Configuration -->
+          <div class="pd-config">
+            <div class="pd-price-block">
+              <span class="pd-price" id="priceDisplay">₹67,490</span>
+              <span class="pd-emi">EMI starts at ₹3,200/mo.</span>
+            </div>
+
+            <!-- Bezel -->
+            <div class="config-group">
+              <span class="config-label">Bezel</span>
+              <div class="config-options">
+                <button class="config-pill active">
+                  Carbon Grey DLC Titanium
+                </button>
+                <button class="config-pill">Titanium</button>
+              </div>
+            </div>
+
+            <!-- Band -->
+            <div class="config-group">
+              <span class="config-label">Band Color</span>
+              <div class="config-options">
+                <button class="config-pill active">Black / Powder Grey</button>
+                <button class="config-pill">Whitestone / Powder Grey</button>
+                <button class="config-pill">Amp Yellow / Black</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="pd-actions">
+              <button class="btn-pd-primary">Add to Cart</button>
+            </div>
           </div>
         </div>
       </section>
-      <section class="page-placeholder">
-        <p>Detailed product information, specifications, and gallery will be added in a future phase.</p>
+
+      <!-- 3. Feature Highlights (Bento Grid) -->
+      <section class="pd-features-section">
+        <div class="bento-grid">
+          <!-- Card 1: Display -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">1.4" AMOLED.</h3>
+              <p class="bento-desc">
+                Brilliant touchscreen display with traditional button controls
+                and lightweight titanium bezel.
+              </p>
+            </div>
+            <div
+              style="
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, #000 0%, transparent 100%);
+                z-index: 0;
+              "
+            ></div>
+          </div>
+
+          <!-- Card 2: Maps -->
+          <div class="bento-card">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Full-Color Maps.</h3>
+              <p class="bento-desc">
+                Whether on city streets or trails, built-in maps keep you on
+                track.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_maps.png"
+              alt="Maps"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 3: Battery -->
+          <div class="bento-card bento-tall">
+            <div class="bento-content dark">
+              <h3 class="bento-title">23 Days Battery.</h3>
+              <p class="bento-desc">
+                Up to 23 days in smartwatch mode and up to 31 hours in GPS mode.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_battery.png"
+              alt="Battery"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+
+          <!-- Card 4: Readiness -->
+          <div class="bento-card bento-large">
+            <div class="bento-content dark">
+              <h3 class="bento-title">Training Readiness.</h3>
+              <p class="bento-desc">
+                From the moment you wake up, get a readiness score based on your
+                sleep quality and load.
+              </p>
+            </div>
+            <img
+              src="../assets/images/feature_health.png"
+              alt="Readiness"
+              class="bento-bg"
+            />
+            <div class="bento-overlay"></div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <script>
+      function updatePrice(btn) {
+        document
+          .querySelectorAll(".config-options .config-pill")
+          .forEach((b) => {
+            if (b.parentNode === btn.parentNode) b.classList.remove("active");
+          });
+        btn.classList.add("active");
+      }
+    </script>
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 
