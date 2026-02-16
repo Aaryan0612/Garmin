@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Activate overlay
     megaOverlay.classList.add("active");
+    // Keep navbar dark while mega overlay is open
+    if (navbar) navbar.classList.add("mega-active");
 
     // Only swap content if category changed
     if (category !== currentCategory) {
@@ -88,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hideOverlay = () => {
     closeTimeout = setTimeout(() => {
       megaOverlay.classList.remove("active");
+      if (navbar) navbar.classList.remove("mega-active");
       navItems.forEach((item) => item.classList.remove("active"));
       currentCategory = null;
     }, 150); // 150ms delay allows mouse to reach panel
@@ -123,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     megaOverlay.addEventListener("click", (e) => {
       if (e.target === megaOverlay) {
         megaOverlay.classList.remove("active");
+        if (navbar) navbar.classList.remove("mega-active");
         navItems.forEach((item) => item.classList.remove("active"));
         currentCategory = null;
       }
@@ -133,6 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && megaOverlay?.classList.contains("active")) {
       megaOverlay.classList.remove("active");
+      if (navbar) navbar.classList.remove("mega-active");
       navItems.forEach((item) => item.classList.remove("active"));
       currentCategory = null;
     }

@@ -108,7 +108,7 @@
           <div class="w-card" data-id="epix-pro">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/fenix-8.png"
+                src="./assets/images/products/epix-pro.png"
                 alt="Epix Pro"
                 class="w-card-image"
               />
@@ -135,7 +135,7 @@
           <div class="w-card" data-id="enduro-2">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/fenix-8.png"
+                src="./assets/images/products/enduro-2.png"
                 alt="Enduro 2"
                 class="w-card-image"
               />
@@ -162,7 +162,7 @@
           <div class="w-card" data-id="instinct-2x">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/fenix-8.png"
+                src="./assets/images/products/instinct-2x.png"
                 alt="Instinct 2X"
                 class="w-card-image"
               />
@@ -228,7 +228,7 @@
           <div class="w-card" data-id="forerunner-265">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/forerunner-965.png"
+                src="./assets/images/products/forerunner-265.png"
                 alt="Forerunner 265"
                 class="w-card-image"
               />
@@ -255,7 +255,7 @@
           <div class="w-card" data-id="forerunner-165">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/forerunner-965.png"
+                src="./assets/images/products/forerunner-165.png"
                 alt="Forerunner 165"
                 class="w-card-image"
               />
@@ -321,7 +321,7 @@
           <div class="w-card" data-id="vivoactive-5">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/venu-3.png"
+                src="./assets/images/products/vivoactive-5.png"
                 alt="Vivoactive 5"
                 class="w-card-image"
               />
@@ -349,7 +349,7 @@
           <div class="w-card" data-id="lily-2">
             <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/venu-3.png"
+                src="./assets/images/products/lily-2.png"
                 alt="Lily 2"
                 class="w-card-image"
               />
@@ -376,67 +376,13 @@
       </section>
     </main>
 
-    <!-- ============================================
-         QUICK VIEW MODAL OVERLAY
-         ============================================ -->
-    <div class="modal-backdrop" id="quickViewModal" aria-hidden="true">
-      <div
-        class="modal-card"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalTitle"
-      >
-        <button class="modal-close" id="modalClose" aria-label="Close modal">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-
-        <!-- Left: Image -->
-        <div class="modal-visual">
-          <img src="" alt="Product Image" class="modal-image" id="modalImage" />
-        </div>
-
-        <!-- Right: Content -->
-        <div class="modal-content-area">
-          <div class="modal-header">
-            <span class="modal-eyebrow" id="modalEyebrow">Collection</span>
-            <h2 class="modal-title" id="modalTitle">Product Name</h2>
-            <div class="modal-price-row">
-              <span class="modal-price" id="modalPrice">₹00,000</span>
-              <span class="modal-emi">EMI available</span>
-            </div>
-
-            <div class="modal-actions">
-              <button class="btn-modal-primary" id="modalBuyBtn">
-                Buy Now
-              </button>
-              <a href="#" class="btn-modal-secondary" id="modalFullDetailsBtn"
-                >Explore further</a
-              >
-            </div>
-
-            <div class="modal-features" id="modalFeatures">
-              <!-- Features injected by JS -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Modal is dynamically injected by product-modal.js -->
 
     <!-- Shared Footer (injected by JS) -->
     <div id="footer-root"></div>
 
     <script src="./scripts/shared-components.js"></script>
     <script src="./scripts/main.js"></script>
-    <script src="./scripts/wearables.js"></script>
+    <script src="./scripts/product-modal.js"></script>
   </body>
 </html>

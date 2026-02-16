@@ -254,148 +254,15 @@
   margin: 0;
 }
 
-/* Clean white product cards */
-.product-card {
-  background: #ffffff;
-  border: none;
-  border-radius: 0;
-  padding: 24px 24px 20px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-.product-card::before {
-  display: none;
-}
-
-.product-card:hover {
-  background: #ffffff;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-}
-
-.product-image-wrapper {
-  position: relative;
+/* Grid-context overrides for .w-card inside landing page grids.
+   Base .w-card styles live in wearables.css.
+   These overrides adapt the card for CSS Grid layout instead of horizontal scroll. */
+.products-grid .w-card {
+  flex: unset;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #f8f8f8;
-  border-radius: 0;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 12px;
-}
-
-.product-image-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.product-card:hover .product-image {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
-.product-card:hover .product-image-hover {
-  opacity: 0;
-}
-
-.product-name {
-  font-size: 18px;
-  font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
-}
-
-.product-tagline {
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(60, 60, 60, 0.6);
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-/* No prices - intentional premium positioning */
-.product-price {
-  display: none;
-}
-
-/* CTA buttons row */
-.product-cta-row {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-top: auto;
-}
-
-.product-cta-primary {
-  padding: 10px 20px;
-  background: #4a5d4a;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 500;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.product-cta-primary:hover {
-  background: #3a4d3a;
-}
-
-.product-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 0;
-  background: transparent;
-  color: #1a1a1a;
-  font-size: 13px;
-  font-weight: 500;
-  transition: gap 0.3s ease;
-}
-
-.product-cta::after {
-  content: "→";
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-cta {
-  gap: 10px;
-}
-
-.product-card:hover .product-cta::after {
-  transform: translateX(4px);
-}
-
-/* ============================================
-   OFF-ROAD SECTION VARIANT
-   Same structure, different accent colors
-   ============================================ */
-
-.offroad-section .product-cta-primary {
-  background: #8b5a2b;
-}
-
-.offroad-section .product-cta-primary:hover {
-  background: #6d4522;
+  height: auto;
+  min-height: 440px;
+  scroll-snap-align: unset;
 }
 
 .offroad-section .featured-bg::after {

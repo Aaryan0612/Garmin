@@ -62,7 +62,8 @@
 
 /* Scrolled State: Frosted Glass */
 .glass-nav.scrolled,
-.glass-nav:hover {
+.glass-nav:hover,
+.glass-nav.mega-active {
   background: var(--glass-bg-dark);
   backdrop-filter: var(--glass-blur-heavy) saturate(180%);
   -webkit-backdrop-filter: var(--glass-blur-heavy) saturate(180%);

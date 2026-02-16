@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="./styles/navigation.css" />
     <link rel="stylesheet" href="./styles/hero.css" />
     <link rel="stylesheet" href="./styles/sections.css" />
+    <link rel="stylesheet" href="./styles/wearables.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
 
     <!-- Preload Hero Video -->
@@ -299,84 +301,125 @@
         <!-- Products grid - 4 columns -->
         <div class="products-grid">
           <!-- Fēnix 8 -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="fenix-8">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/fenix-8.png"
+                src="./assets/watchImages/fenix-8.webp"
                 alt="Garmin Fēnix 8"
-                class="product-image"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Fēnix 8</h3>
-            <p class="product-tagline">Ultimate Adventure Watch</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/fenix-8.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow new">New</span>
+                <h3 class="w-card-title">Fēnix 8</h3>
+                <p class="w-card-desc">
+                  Ultimate adventure smartwatch with AMOLED display and LED
+                  flashlight.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹86,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/fenix-8.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
           <!-- Forerunner 965 -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="forerunner-965">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/forerunner-965.png"
+                src="./assets/watchImages/Forerunner 965.webp"
                 alt="Garmin Forerunner 965"
-                class="product-image"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Forerunner 965</h3>
-            <p class="product-tagline">Premium Running Watch</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/forerunner-965.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Top Pick</span>
+                <h3 class="w-card-title">Forerunner 965</h3>
+                <p class="w-card-desc">
+                  Premium running smartwatch with colorful AMOLED display.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹67,490</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/forerunner-965.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
           <!-- Venu 3 -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="venu-3">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/venu-3.png"
+                src="./assets/watchImages/venu3.webp"
                 alt="Garmin Venu 3"
-                class="product-image"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Venu 3</h3>
-            <p class="product-tagline">Lifestyle Smartwatch</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/venu-3.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow new">Smart & Health</span>
+                <h3 class="w-card-title">Venu 3</h3>
+                <p class="w-card-desc">
+                  Know the real you with advanced health and fitness features.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">₹50,490</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/venu-3.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
           <!-- Edge 1050 -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="edge-1050">
+            <div class="w-card-image-wrapper">
               <img
                 src="./assets/images/products/edge-1050.png"
                 alt="Garmin Edge 1050"
-                class="product-image"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Edge 1050</h3>
-            <p class="product-tagline">Ultimate Cycling Computer</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/edge-1050.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Cycling</span>
+                <h3 class="w-card-title">Edge 1050</h3>
+                <p class="w-card-desc">
+                  Ultimate cycling computer with the largest Edge display ever.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹69,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/edge-1050.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -441,84 +484,124 @@
         <!-- Products grid - 4 columns -->
         <div class="products-grid">
           <!-- Tread XL -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="tread-xl">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/tread-xl.png"
-                alt="Garmin Tread XL - Overland Edition"
-                class="product-image"
+                src="./assets/images/products/edge-1050.png"
+                alt="Garmin Tread XL"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Tread® XL</h3>
-            <p class="product-tagline">10" All-Terrain Navigator</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/tread-xl.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">All-Terrain</span>
+                <h3 class="w-card-title">Tread® XL</h3>
+                <p class="w-card-desc">
+                  10" all-terrain navigator built for overlanding and off-road.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹1,49,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/tread-xl.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
           <!-- Tread 2 -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="tread-2">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/tread-2.png"
-                alt="Garmin Tread 2 - Overland Edition"
-                class="product-image"
+                src="./assets/images/products/edge-1050.png"
+                alt="Garmin Tread 2"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Tread® 2</h3>
-            <p class="product-tagline">8" All-Terrain Navigator</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/tread-2.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">All-Terrain</span>
+                <h3 class="w-card-title">Tread® 2</h3>
+                <p class="w-card-desc">
+                  8" all-terrain navigator with group tracking and topo maps.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹89,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/tread-2.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
           <!-- Overlander -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="overlander">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/overlander.png"
+                src="./assets/images/products/edge-1050.png"
                 alt="Garmin Overlander"
-                class="product-image"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Overlander®</h3>
-            <p class="product-tagline">Rugged GPS Navigator</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/overlander.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Rugged</span>
+                <h3 class="w-card-title">Overlander®</h3>
+                <p class="w-card-desc">
+                  Rugged GPS navigator with topographic mapping for off-grid.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹67,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/overlander.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
           <!-- Montana 700 -->
-          <article class="product-card scroll-reveal">
-            <div class="product-image-wrapper">
+          <div class="w-card scroll-reveal" data-id="montana-700">
+            <div class="w-card-image-wrapper">
               <img
-                src="./assets/images/products/montana-700.png"
+                src="./assets/images/products/edge-1050.png"
                 alt="Garmin Montana 700"
-                class="product-image"
+                class="w-card-image"
                 loading="lazy"
               />
             </div>
-            <h3 class="product-name">Montana® 700</h3>
-            <p class="product-tagline">Handheld GPS Navigator</p>
-            <div class="product-cta-row">
-              <button class="product-cta-primary">Get Started</button>
-              <a href="./products/montana-700.html" class="product-cta"
-                >Learn more</a
-              >
+            <div class="w-card-content">
+              <div class="w-card-text">
+                <span class="w-card-eyebrow">Handheld GPS</span>
+                <h3 class="w-card-title">Montana® 700</h3>
+                <p class="w-card-desc">
+                  5" touchscreen handheld GPS with inReach satellite technology.
+                </p>
+              </div>
+              <div class="w-card-actions">
+                <span class="w-card-price">From ₹54,990</span>
+                <div class="w-card-buttons">
+                  <button class="w-btn-buy">Buy</button>
+                  <a href="./products/montana-700.html" class="w-link-learn"
+                    >Learn more ></a
+                  >
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -606,5 +689,6 @@
     <!-- JavaScript -->
     <script src="./scripts/shared-components.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/product-modal.js"></script>
   </body>
 </html>
