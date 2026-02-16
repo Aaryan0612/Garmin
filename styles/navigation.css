@@ -73,6 +73,17 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
+/* Light-background pages: nav always visible */
+.page-light .glass-nav {
+  background: var(--glass-bg-dark);
+  backdrop-filter: var(--glass-blur-heavy) saturate(180%);
+  -webkit-backdrop-filter: var(--glass-blur-heavy) saturate(180%);
+  border-bottom: 1px solid var(--glass-border-visible);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
 /* ============================================
    NAV CONTAINER
    ============================================ */

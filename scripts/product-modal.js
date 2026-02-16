@@ -407,6 +407,9 @@
     },
   };
 
+  // Expose product data globally for cart.js
+  window.GarminProducts = productData;
+
   // ============================================
   // HELPER: Resolve relative paths based on page depth
   // ============================================
