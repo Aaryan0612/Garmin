@@ -316,10 +316,6 @@
 }
 
 /* ============================================
-   FEATURED COLUMN (REMOVED)
-   ============================================ */
-
-/* ============================================
    FOOTER ROW (SYSTEM UTILITIES)
    Visually separated, never competes with content
    ============================================ */
@@ -617,7 +613,6 @@
   .glass-nav,
   .mega-overlay,
   .menu-link,
-  .featured-card,
   .mobile-menu {
     transition: none;
   }
@@ -630,8 +625,7 @@
 /* Focus states */
 .nav-item > a:focus-visible,
 .menu-link:focus-visible,
-.icon-btn:focus-visible,
-.featured-card:focus-visible {
+.icon-btn:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 2px;
 }

@@ -4,30 +4,6 @@
    ============================================ */
 
 /* ============================================
-   ACT 2: TRANSITION BUFFER
-   Soft gradient between hero and content
-   ============================================ */
-
-.hero-transition {
-  position: relative;
-  min-height: 0;
-  height: 0;
-  background: #2a2a30;
-  overflow: hidden;
-  display: none;
-}
-
-/* Extremely subtle grain texture - felt, not seen */
-.hero-transition::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  opacity: 0.015;
-  pointer-events: none;
-}
-
-/* ============================================
    ACT 3: GARMIN UNIVERSE - WORLD GRID
    Edge-to-edge category exploration
    ============================================ */
@@ -286,10 +262,6 @@
   position: relative;
 }
 
-.credibility-title {
-  display: none; /* Remove corporate heading */
-}
-
 .stats-grid {
   display: flex;
   justify-content: center;
@@ -457,15 +429,6 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 40%);
   z-index: 1;
   pointer-events: none;
-}
-
-/* ============================================
-   TRUST STRIP - INTEGRATED INTO FOOTER
-   Will be styled in footer.css
-   ============================================ */
-
-.trust-strip {
-  display: none; /* Integrated into footer */
 }
 
 /* ============================================

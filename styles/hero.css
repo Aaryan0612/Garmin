@@ -96,38 +96,6 @@
   flex-wrap: wrap;
 }
 
-/* Override button styles for hero context */
-.hero .btn-primary {
-  background-color: var(--white);
-  color: var(--navy-blue);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 18px 40px;
-  border-radius: var(--radius-pill);
-}
-
-.hero .btn-primary:hover {
-  background-color: var(--teal-accent);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 180, 204, 0.3);
-}
-
-.hero .btn-secondary {
-  background-color: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 16px 38px;
-  border-radius: var(--radius-pill);
-}
-
-.hero .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: var(--teal-accent);
-}
-
 /* ============================================
    SCROLL INDICATOR
    ============================================ */
