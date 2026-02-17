@@ -258,6 +258,16 @@
         }
         return;
       }
+      // Product detail page "Add to Cart" button
+      const pdBtn = e.target.closest(".btn-pd-primary");
+      if (pdBtn) {
+        e.preventDefault();
+        const pageMain = document.querySelector(".page-main[data-product-id]");
+        if (pageMain && pageMain.dataset.productId) {
+          Cart.add(pageMain.dataset.productId);
+        }
+        return;
+      }
     });
   }
 
